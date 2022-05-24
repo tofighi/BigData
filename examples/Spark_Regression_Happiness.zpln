@@ -1,0 +1,1617 @@
+﻿{
+  "paragraphs": [
+    {
+      "text": "%md\n",
+      "user": "anonymous",
+      "dateUpdated": "2022-05-24T22:28:03+0000",
+      "progress": 0,
+      "config": {
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1653431283434_1040397820",
+      "id": "paragraph_1653431283434_1040397820",
+      "dateCreated": "2022-05-24T22:28:03+0000",
+      "status": "READY",
+      "focus": true,
+      "$$hashKey": "object:46583"
+    },
+    {
+      "text": "%md\n# Happiness Dataset\nThis is a Regression example for predicting a numerical value. We first need to download Happiness dataset and we are going to predict Happiness rank from Happiness score of a country.",
+      "user": "anonymous",
+      "dateUpdated": "2022-05-24T22:26:31+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h1>Happiness Dataset</h1>\n<p>This is a Regression example for predicting a numerical value. We first need to download Happiness dataset and we are going to predict Happiness rank from Happiness score of a country.</p>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1653430892267_1621191180",
+      "id": "20220524-194528_1656670317",
+      "dateCreated": "2022-05-24T22:21:32+0000",
+      "dateStarted": "2022-05-24T22:26:31+0000",
+      "dateFinished": "2022-05-24T22:26:31+0000",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:43019"
+    },
+    {
+      "text": "%md\n",
+      "user": "anonymous",
+      "dateUpdated": "2022-05-24T22:28:10+0000",
+      "progress": 0,
+      "config": {
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1653431290871_755413515",
+      "id": "paragraph_1653431290871_755413515",
+      "dateCreated": "2022-05-24T22:28:10+0000",
+      "status": "READY",
+      "focus": true,
+      "$$hashKey": "object:46678"
+    },
+    {
+      "text": "%sh\ncurl https://raw.githubusercontent.com/tofighi/dataset/main/big-data/happiness/happiness_2020.csv --output happiness.csv --silent\nmv happiness.csv  /var/tmp/",
+      "user": "anonymous",
+      "dateUpdated": "2022-05-24T22:26:32+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sh",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sh",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1653430892268_344197426",
+      "id": "20220524-193216_2080317810",
+      "dateCreated": "2022-05-24T22:21:32+0000",
+      "dateStarted": "2022-05-24T22:26:32+0000",
+      "dateFinished": "2022-05-24T22:26:32+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:43020"
+    },
+    {
+      "text": "%md\nJust a bunch of import statements, you can run these in a paste command\n",
+      "user": "anonymous",
+      "dateUpdated": "2022-05-24T22:26:32+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<p>Just a bunch of import statements, you can run these in a paste command</p>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1653430892268_98975173",
+      "id": "20220524-195946_1460509698",
+      "dateCreated": "2022-05-24T22:21:32+0000",
+      "dateStarted": "2022-05-24T22:26:32+0000",
+      "dateFinished": "2022-05-24T22:26:32+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:43021"
+    },
+    {
+      "text": "import org.apache.spark.sql.functions._\r\nimport org.apache.spark.ml.feature.{VectorAssembler}\r\nimport org.apache.spark.ml.Pipeline\r\nimport org.apache.spark.ml.regression.{LinearRegression}\r\nimport org.apache.spark.ml.tuning.{CrossValidator, CrossValidatorModel, ParamGridBuilder}\r\nimport org.apache.spark.ml.evaluation.{RegressionEvaluator}\r\nimport org.apache.spark.ml.param.ParamMap\r\nimport org.apache.spark.sql.types.{DoubleType}",
+      "user": "anonymous",
+      "dateUpdated": "2022-05-24T22:26:32+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "import org.apache.spark.sql.functions._\nimport org.apache.spark.ml.feature.VectorAssembler\nimport org.apache.spark.ml.Pipeline\nimport org.apache.spark.ml.regression.LinearRegression\nimport org.apache.spark.ml.tuning.{CrossValidator, CrossValidatorModel, ParamGridBuilder}\nimport org.apache.spark.ml.evaluation.RegressionEvaluator\nimport org.apache.spark.ml.param.ParamMap\nimport org.apache.spark.sql.types.DoubleType\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1653430892268_559921272",
+      "id": "20220524-190025_1527682737",
+      "dateCreated": "2022-05-24T22:21:32+0000",
+      "dateStarted": "2022-05-24T22:26:32+0000",
+      "dateFinished": "2022-05-24T22:26:32+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:43022"
+    },
+    {
+      "text": "%md\n-- Loading our CSV file, note the inferSchema option being set to true",
+      "user": "anonymous",
+      "dateUpdated": "2022-05-24T22:26:32+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<p>&ndash; Loading our CSV file, note the inferSchema option being set to true</p>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1653430892268_1243865804",
+      "id": "20220524-200001_1614000196",
+      "dateCreated": "2022-05-24T22:21:32+0000",
+      "dateStarted": "2022-05-24T22:26:32+0000",
+      "dateFinished": "2022-05-24T22:26:32+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:43023"
+    },
+    {
+      "text": "val data = spark.read\r\n .format(\"csv\")\r\n .option(\"sep\", \",\")\r\n .option(\"inferSchema\", \"true\")\r\n .option(\"header\", \"true\")\r\n .load(\"file:///var/tmp/happiness.csv\")",
+      "user": "anonymous",
+      "dateUpdated": "2022-05-24T22:26:32+0000",
+      "progress": 100,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mdata\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [Country name: string, Regional indicator: string ... 19 more fields]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://spark-m.us-central1-c.c.my-project-342303.internal:42435/jobs/job?id=193",
+              "$$hashKey": "object:44315"
+            },
+            {
+              "jobUrl": "http://spark-m.us-central1-c.c.my-project-342303.internal:42435/jobs/job?id=194",
+              "$$hashKey": "object:44316"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1653430892268_53950683",
+      "id": "20220524-190610_719935459",
+      "dateCreated": "2022-05-24T22:21:32+0000",
+      "dateStarted": "2022-05-24T22:26:32+0000",
+      "dateFinished": "2022-05-24T22:26:33+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:43024"
+    },
+    {
+      "text": "%md\n-- Here we are just selecting two columns from our dataset --> The happiness rank and happiness score",
+      "user": "anonymous",
+      "dateUpdated": "2022-05-24T22:26:33+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<p>&ndash; Here we are just selecting two columns from our dataset &ndash;&gt; The happiness rank and happiness score</p>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1653430892268_78298806",
+      "id": "20220524-201005_601234822",
+      "dateCreated": "2022-05-24T22:21:32+0000",
+      "dateStarted": "2022-05-24T22:26:42+0000",
+      "dateFinished": "2022-05-24T22:26:42+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:43025"
+    },
+    {
+      "text": "val rank_score = data.select(col(\"Happiness Rank\").cast(DoubleType), col(\"Happiness Score\").cast(DoubleType))",
+      "user": "anonymous",
+      "dateUpdated": "2022-05-24T22:26:42+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mrank_score\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [Happiness Rank: double, Happiness Score: double]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1653430892268_1656158997",
+      "id": "20220524-190743_550259917",
+      "dateCreated": "2022-05-24T22:21:32+0000",
+      "dateStarted": "2022-05-24T22:26:42+0000",
+      "dateFinished": "2022-05-24T22:26:42+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:43026"
+    },
+    {
+      "text": "rank_score.show(5)",
+      "user": "anonymous",
+      "dateUpdated": "2022-05-24T22:26:42+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+--------------+---------------+\n|Happiness Rank|Happiness Score|\n+--------------+---------------+\n|           1.0|    7.808700085|\n|           2.0|    7.645599842|\n|           3.0|    7.559899807|\n|           4.0|    7.504499912|\n|           5.0|    7.487999916|\n+--------------+---------------+\nonly showing top 5 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://spark-m.us-central1-c.c.my-project-342303.internal:42435/jobs/job?id=195",
+              "$$hashKey": "object:44500"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1653430892268_2112178635",
+      "id": "20220524-201025_378953462",
+      "dateCreated": "2022-05-24T22:21:32+0000",
+      "dateStarted": "2022-05-24T22:26:42+0000",
+      "dateFinished": "2022-05-24T22:26:42+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:43027"
+    },
+    {
+      "text": "%md\r\n-- Next we split the dataset into training and test sets\r\n-- We use a randomSplit function with a split percentage of 80%, and 20%\r\n-- The second argument to the function is the seed, it is used to get the same random results every time (for reproducibility of the results)",
+      "user": "anonymous",
+      "dateUpdated": "2022-05-24T22:26:43+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<p>&ndash; Next we split the dataset into training and test sets<br />\n&ndash; We use a randomSplit function with a split percentage of 80%, and 20%<br />\n&ndash; The second argument to the function is the seed, it is used to get the same random results every time (for reproducibility of the results)</p>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1653430892268_1450909811",
+      "id": "20220524-200050_91780530",
+      "dateCreated": "2022-05-24T22:21:32+0000",
+      "dateStarted": "2022-05-24T22:26:43+0000",
+      "dateFinished": "2022-05-24T22:26:43+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:43028"
+    },
+    {
+      "text": "val Array(trainingData, testData) = rank_score.randomSplit(Array(0.8, 0.2), seed=1111) ",
+      "user": "anonymous",
+      "dateUpdated": "2022-05-24T22:26:43+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mtrainingData\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Dataset[org.apache.spark.sql.Row]\u001b[0m = [Happiness Rank: double, Happiness Score: double]\n\u001b[1m\u001b[34mtestData\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Dataset[org.apache.spark.sql.Row]\u001b[0m = [Happiness Rank: double, Happiness Score: double]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1653430892268_1627618456",
+      "id": "20220524-191110_1590887882",
+      "dateCreated": "2022-05-24T22:21:32+0000",
+      "dateStarted": "2022-05-24T22:26:45+0000",
+      "dateFinished": "2022-05-24T22:26:46+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:43029"
+    },
+    {
+      "text": "%md\n## Machine Learning Steps\n\n-- All the following steps will be the same for all machine learning problems\n\n-- Preparing features and labels \n\n-- We need to prepare our features and labels to supply it to our algorithm, in this case linear regression\n-- Remember features are the input data to our algorithm and labels are the values our algorithm is going to train the model to predict\n-- Features are also called independent variables\n-- Lables are also called dependent variables\n\n-- In our problem, we only have one FEATURE, it is the happiness score\n-- We will predict the happiness rank, which becomes the LABEL\n\n-- We will pass an array to the InputCols with the name of all the features \n-- And we will simply give the name of the output column\n\n-- Think of a VectorAssembler as an Array\n-- Vector assembler can be used to package one feature or multiple features into a vector\n-- And this will be our features column\n-- We pass an array to inputCols with the name of all the features we want to assemple",
+      "user": "anonymous",
+      "dateUpdated": "2022-05-24T22:26:46+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h2>Machine Learning Steps</h2>\n<p>&ndash; All the following steps will be the same for all machine learning problems</p>\n<p>&ndash; Preparing features and labels</p>\n<p>&ndash; We need to prepare our features and labels to supply it to our algorithm, in this case linear regression<br />\n&ndash; Remember features are the input data to our algorithm and labels are the values our algorithm is going to train the model to predict<br />\n&ndash; Features are also called independent variables<br />\n&ndash; Lables are also called dependent variables</p>\n<p>&ndash; In our problem, we only have one FEATURE, it is the happiness score<br />\n&ndash; We will predict the happiness rank, which becomes the LABEL</p>\n<p>&ndash; We will pass an array to the InputCols with the name of all the features<br />\n&ndash; And we will simply give the name of the output column</p>\n<p>&ndash; Think of a VectorAssembler as an Array<br />\n&ndash; Vector assembler can be used to package one feature or multiple features into a vector<br />\n&ndash; And this will be our features column<br />\n&ndash; We pass an array to inputCols with the name of all the features we want to assemple</p>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1653430892268_1060674475",
+      "id": "20220524-191121_427623199",
+      "dateCreated": "2022-05-24T22:21:32+0000",
+      "dateStarted": "2022-05-24T22:26:56+0000",
+      "dateFinished": "2022-05-24T22:26:56+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:43030"
+    },
+    {
+      "text": "val assembler = new VectorAssembler()\n.setInputCols(Array(\"Happiness Score\"))\n.setOutputCol(\"assembled-features\")",
+      "user": "anonymous",
+      "dateUpdated": "2022-05-24T22:26:57+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34massembler\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.ml.feature.VectorAssembler\u001b[0m = VectorAssembler: uid=vecAssembler_4de83a7e87ea, handleInvalid=error, numInputCols=1\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1653430892268_2054387201",
+      "id": "20220524-191208_943865217",
+      "dateCreated": "2022-05-24T22:21:32+0000",
+      "dateStarted": "2022-05-24T22:26:57+0000",
+      "dateFinished": "2022-05-24T22:26:57+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:43031"
+    },
+    {
+      "text": "%md\r\n-- Next we will instantiate our algorithm, in this case linear regression, and set the features and label column\r\n-- In this case, the features column will be the output from VectorAssembler which is the assembled features\r\n-- And label is the value linear regression will try to predict which is the happiness rank\r\n-- Features column will be the output form the vector assempler",
+      "user": "anonymous",
+      "dateUpdated": "2022-05-24T22:26:57+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<p>&ndash; Next we will instantiate our algorithm, in this case linear regression, and set the features and label column<br />\n&ndash; In this case, the features column will be the output from VectorAssembler which is the assembled features<br />\n&ndash; And label is the value linear regression will try to predict which is the happiness rank<br />\n&ndash; Features column will be the output form the vector assempler</p>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1653430892268_216189059",
+      "id": "20220524-191225_1407448953",
+      "dateCreated": "2022-05-24T22:21:32+0000",
+      "dateStarted": "2022-05-24T22:26:57+0000",
+      "dateFinished": "2022-05-24T22:26:57+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:43032"
+    },
+    {
+      "text": "val lr = new LinearRegression() \n .setFeaturesCol(\"assembled-features\")\n .setLabelCol(\"Happiness Rank\")\n",
+      "user": "anonymous",
+      "dateUpdated": "2022-05-24T22:26:57+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mlr\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.ml.regression.LinearRegression\u001b[0m = linReg_9b8f94c467f2\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1653430892273_1304185209",
+      "id": "20220524-191249_1342360705",
+      "dateCreated": "2022-05-24T22:21:32+0000",
+      "dateStarted": "2022-05-24T22:26:57+0000",
+      "dateFinished": "2022-05-24T22:26:57+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:43033"
+    },
+    {
+      "text": "%md\n-- Next we create a pipeline for everything that needs to be executed\n-- Think of the pipeline as the assembly line in the factory where all the parts for a product are assembled together\n-- This is what we are doing with pipeline\n-- We create STAGES in pipelines\n-- In this example, our pipeline has only two stages\n-- The first stage is where we assemble the features with VectorAssembler\n-- And the second stage, we'll specify the algorithm that is used to train the model\n",
+      "user": "anonymous",
+      "dateUpdated": "2022-05-24T22:26:57+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<p>&ndash; Next we create a pipeline for everything that needs to be executed<br />\n&ndash; Think of the pipeline as the assembly line in the factory where all the parts for a product are assembled together<br />\n&ndash; This is what we are doing with pipeline<br />\n&ndash; We create STAGES in pipelines<br />\n&ndash; In this example, our pipeline has only two stages<br />\n&ndash; The first stage is where we assemble the features with VectorAssembler<br />\n&ndash; And the second stage, we&rsquo;ll specify the algorithm that is used to train the model</p>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1653430892273_2000103374",
+      "id": "20220524-191243_2083502609",
+      "dateCreated": "2022-05-24T22:21:32+0000",
+      "dateStarted": "2022-05-24T22:26:57+0000",
+      "dateFinished": "2022-05-24T22:26:57+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:43034"
+    },
+    {
+      "text": "%spark\nval pipeline = new Pipeline()\n .setStages(Array(assembler, lr))",
+      "user": "anonymous",
+      "dateUpdated": "2022-05-24T22:26:57+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "editorHide": false,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mpipeline\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.ml.Pipeline\u001b[0m = pipeline_306f3819e49e\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1653430892274_565239307",
+      "id": "20220524-191319_1538358145",
+      "dateCreated": "2022-05-24T22:21:32+0000",
+      "dateStarted": "2022-05-24T22:26:58+0000",
+      "dateFinished": "2022-05-24T22:26:58+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:43035"
+    },
+    {
+      "text": "%md\n-- Once we train the model, we need to evaluate the model for accuracy\n-- Since this is a regression problem, we will use RegressionEvaluator to evaluate the model\n-- The model, once it performs the predictions, it will store the prediction results in the predition column\n-- Once a prediction is made, we need to evalue the prediction with the actual value, so we know how good the prediction is\n-- So in our case, our model will predict the ranking based on our score\n-- We need to see if the the prediction matches the actual or not\n-- If it doesn't match, we want to know how far the prediction is from the actual value\n-- We will use a metric called r squared to show the accuracy of the model prediction\n-- r squared is also called coefficient of determination\n-- r squared basically tells us how good our model is \n-- The higher the r2 model the better our model\n-- r2 is a value between 0 and 1, and as much as it is closer to 1 it is better)",
+      "user": "anonymous",
+      "dateUpdated": "2022-05-24T22:26:58+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<p>&ndash; Once we train the model, we need to evaluate the model for accuracy<br />\n&ndash; Since this is a regression problem, we will use RegressionEvaluator to evaluate the model<br />\n&ndash; The model, once it performs the predictions, it will store the prediction results in the predition column<br />\n&ndash; Once a prediction is made, we need to evalue the prediction with the actual value, so we know how good the prediction is<br />\n&ndash; So in our case, our model will predict the ranking based on our score<br />\n&ndash; We need to see if the the prediction matches the actual or not<br />\n&ndash; If it doesn&rsquo;t match, we want to know how far the prediction is from the actual value<br />\n&ndash; We will use a metric called r squared to show the accuracy of the model prediction<br />\n&ndash; r squared is also called coefficient of determination<br />\n&ndash; r squared basically tells us how good our model is<br />\n&ndash; The higher the r2 model the better our model<br />\n&ndash; r2 is a value between 0 and 1, and as much as it is closer to 1 it is better)</p>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1653430892274_3235619",
+      "id": "20220524-191335_1868375238",
+      "dateCreated": "2022-05-24T22:21:32+0000",
+      "dateStarted": "2022-05-24T22:27:03+0000",
+      "dateFinished": "2022-05-24T22:27:03+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:43036"
+    },
+    {
+      "text": "%spark\r\nval evaluator = new RegressionEvaluator()\r\n .setLabelCol(\"Happiness Rank\")\r\n .setPredictionCol(\"prediction\")\r\n .setMetricName(\"r2\")",
+      "user": "anonymous",
+      "dateUpdated": "2022-05-24T22:27:03+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "editorHide": false,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mevaluator\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.ml.evaluation.RegressionEvaluator\u001b[0m = RegressionEvaluator: uid=regEval_52795ab5fb0f, metricName=r2, throughOrigin=false\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1653430892274_1539631587",
+      "id": "20220524-191359_945229384",
+      "dateCreated": "2022-05-24T22:21:32+0000",
+      "dateStarted": "2022-05-24T22:27:03+0000",
+      "dateFinished": "2022-05-24T22:27:03+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:43037"
+    },
+    {
+      "text": "%md\n-- Next we setup our cross validator\n-- cross validator is an interesting concept\n-- We need to provide two things to the CrossValidator\n-- An estimator and an evaluator\n-- Estimator we provide the pipeline\n-- For the evaluator we provide regression evaluator \n-- We can provide additinoal parameters called \"hyper parameters\" which can be used for tuning our model\n-- We don't have any hyper parameters so we create an instance of the parameter Grid Builder and call the build method\n-- This will provide an empty parameter map\n-- Finally we specify the fold as 3\n-- This means the cross validator will generate three sets of data from our initial training dataset\n-- In other words it \"folds\" the data into 3 and from each sets of data, it will use 2/3 of the data for training and 1/3 of the data for testing\n-- And then it will fix the model based on the best accuracy based on the defined evaluation metric, in our case r2",
+      "user": "anonymous",
+      "dateUpdated": "2022-05-24T22:27:03+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": true,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": false,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<p>&ndash; Next we setup our cross validator<br />\n&ndash; cross validator is an interesting concept<br />\n&ndash; We need to provide two things to the CrossValidator<br />\n&ndash; An estimator and an evaluator<br />\n&ndash; Estimator we provide the pipeline<br />\n&ndash; For the evaluator we provide regression evaluator<br />\n&ndash; We can provide additinoal parameters called &ldquo;hyper parameters&rdquo; which can be used for tuning our model<br />\n&ndash; We don&rsquo;t have any hyper parameters so we create an instance of the parameter Grid Builder and call the build method<br />\n&ndash; This will provide an empty parameter map<br />\n&ndash; Finally we specify the fold as 3<br />\n&ndash; This means the cross validator will generate three sets of data from our initial training dataset<br />\n&ndash; In other words it &ldquo;folds&rdquo; the data into 3 and from each sets of data, it will use 2/3 of the data for training and 1/3 of the data for testing<br />\n&ndash; And then it will fix the model based on the best accuracy based on the defined evaluation metric, in our case r2</p>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1653430892274_1387984757",
+      "id": "20220524-191415_1155686197",
+      "dateCreated": "2022-05-24T22:21:32+0000",
+      "dateStarted": "2022-05-24T22:27:04+0000",
+      "dateFinished": "2022-05-24T22:27:04+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:43038"
+    },
+    {
+      "text": "%spark\r\nval cross_validator = new CrossValidator()\r\n .setEstimator(pipeline)\r\n .setEvaluator(evaluator)\r\n .setEstimatorParamMaps(new ParamGridBuilder().build)\r\n .setNumFolds(3)",
+      "user": "anonymous",
+      "dateUpdated": "2022-05-24T22:27:04+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "editorHide": false,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mcross_validator\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.ml.tuning.CrossValidator\u001b[0m = cv_2816fc05f7ee\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1653430892274_571127785",
+      "id": "20220524-191440_773595662",
+      "dateCreated": "2022-05-24T22:21:32+0000",
+      "dateStarted": "2022-05-24T22:27:04+0000",
+      "dateFinished": "2022-05-24T22:27:04+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:43039"
+    },
+    {
+      "text": "%md\n-- Next we call fit on the cross validator passing our trainig dataset\n-- CrossValidator will now fold the dataset into 3, divide each subset into training and test set\n-- Inside each fold, it will use the training set to train and test set to evaluate the model based on r2\n-- The best of the three models is returned ",
+      "user": "anonymous",
+      "dateUpdated": "2022-05-24T22:27:04+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<p>&ndash; Next we call fit on the cross validator passing our trainig dataset<br />\n&ndash; CrossValidator will now fold the dataset into 3, divide each subset into training and test set<br />\n&ndash; Inside each fold, it will use the training set to train and test set to evaluate the model based on r2<br />\n&ndash; The best of the three models is returned</p>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1653430892274_1548424819",
+      "id": "20220524-191445_1792134176",
+      "dateCreated": "2022-05-24T22:21:32+0000",
+      "dateStarted": "2022-05-24T22:27:04+0000",
+      "dateFinished": "2022-05-24T22:27:04+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:43040"
+    },
+    {
+      "text": "%spark\nval cvModel = cross_validator.fit(trainingData)",
+      "user": "anonymous",
+      "dateUpdated": "2022-05-24T22:27:04+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "editorHide": false,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mcvModel\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.ml.tuning.CrossValidatorModel\u001b[0m = CrossValidatorModel: uid=cv_2816fc05f7ee, bestModel=pipeline_306f3819e49e, numFolds=3\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://spark-m.us-central1-c.c.my-project-342303.internal:42435/jobs/job?id=196",
+              "$$hashKey": "object:46308"
+            },
+            {
+              "jobUrl": "http://spark-m.us-central1-c.c.my-project-342303.internal:42435/jobs/job?id=197",
+              "$$hashKey": "object:46309"
+            },
+            {
+              "jobUrl": "http://spark-m.us-central1-c.c.my-project-342303.internal:42435/jobs/job?id=198",
+              "$$hashKey": "object:46310"
+            },
+            {
+              "jobUrl": "http://spark-m.us-central1-c.c.my-project-342303.internal:42435/jobs/job?id=199",
+              "$$hashKey": "object:46311"
+            },
+            {
+              "jobUrl": "http://spark-m.us-central1-c.c.my-project-342303.internal:42435/jobs/job?id=200",
+              "$$hashKey": "object:46312"
+            },
+            {
+              "jobUrl": "http://spark-m.us-central1-c.c.my-project-342303.internal:42435/jobs/job?id=201",
+              "$$hashKey": "object:46313"
+            },
+            {
+              "jobUrl": "http://spark-m.us-central1-c.c.my-project-342303.internal:42435/jobs/job?id=202",
+              "$$hashKey": "object:46314"
+            },
+            {
+              "jobUrl": "http://spark-m.us-central1-c.c.my-project-342303.internal:42435/jobs/job?id=203",
+              "$$hashKey": "object:46315"
+            },
+            {
+              "jobUrl": "http://spark-m.us-central1-c.c.my-project-342303.internal:42435/jobs/job?id=204",
+              "$$hashKey": "object:46316"
+            },
+            {
+              "jobUrl": "http://spark-m.us-central1-c.c.my-project-342303.internal:42435/jobs/job?id=205",
+              "$$hashKey": "object:46317"
+            },
+            {
+              "jobUrl": "http://spark-m.us-central1-c.c.my-project-342303.internal:42435/jobs/job?id=206",
+              "$$hashKey": "object:46318"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1653430892274_114171236",
+      "id": "20220524-191447_862455991",
+      "dateCreated": "2022-05-24T22:21:32+0000",
+      "dateStarted": "2022-05-24T22:27:06+0000",
+      "dateFinished": "2022-05-24T22:27:08+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:43041"
+    },
+    {
+      "text": "%md\r\n-- Now cvModel is a trained model that we can use to make predictions\r\n-- We can actually save this model and reuse it as well\r\n-- We'll see how to do that later\r\n\r\n-- Before we can use our model on the real data, let's test our data on the real data to see how good it is\r\n-- We now called cvModel.transform on the testData set\r\n-- when we call transform, our model will go over the dataset and make predictions",
+      "user": "anonymous",
+      "dateUpdated": "2022-05-24T22:27:08+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<p>&ndash; Now cvModel is a trained model that we can use to make predictions<br />\n&ndash; We can actually save this model and reuse it as well<br />\n&ndash; We&rsquo;ll see how to do that later</p>\n<p>&ndash; Before we can use our model on the real data, let&rsquo;s test our data on the real data to see how good it is<br />\n&ndash; We now called cvModel.transform on the testData set<br />\n&ndash; when we call transform, our model will go over the dataset and make predictions</p>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1653430892274_1696554744",
+      "id": "20220524-191449_853834300",
+      "dateCreated": "2022-05-24T22:21:32+0000",
+      "dateStarted": "2022-05-24T22:27:11+0000",
+      "dateFinished": "2022-05-24T22:27:11+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:43042"
+    },
+    {
+      "text": "%spark\nval predictions = cvModel.transform(testData)",
+      "user": "anonymous",
+      "dateUpdated": "2022-05-24T22:27:11+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "editorHide": false,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mpredictions\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [Happiness Rank: double, Happiness Score: double ... 2 more fields]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1653430892274_1017961448",
+      "id": "20220524-191458_1860124094",
+      "dateCreated": "2022-05-24T22:21:32+0000",
+      "dateStarted": "2022-05-24T22:27:11+0000",
+      "dateFinished": "2022-05-24T22:27:11+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:43043"
+    },
+    {
+      "text": "%spark\npredictions.show()",
+      "user": "anonymous",
+      "dateUpdated": "2022-05-24T22:27:11+0000",
+      "progress": 100,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+--------------+---------------+------------------+-------------------+\n|Happiness Rank|Happiness Score|assembled-features|         prediction|\n+--------------+---------------+------------------+-------------------+\n|           6.0|    7.448900223|     [7.448900223]|-0.3612801223157476|\n|          13.0|    7.164500237|     [7.164500237]|  10.67099744837543|\n|          17.0|    7.075799942|     [7.075799942]| 14.111807304963122|\n|          31.0|    6.377099991|     [6.377099991]|  41.21536629761488|\n|          65.0|    5.747499943|     [5.747499943]|  65.63844235239534|\n|          75.0|    5.539899826|     [5.539899826]|  73.69154441707678|\n|          78.0|    5.510399818|     [5.510399818]|  74.83589143752147|\n|          97.0|    5.094799995|     [5.094799995]|  90.95759618917407|\n|         103.0|    4.909599781|     [4.909599781]|  98.14177434521451|\n|         105.0|    4.882699966|     [4.882699966]|  99.18525620277074|\n|         118.0|    4.672399998|     [4.672399998]| 107.34308930506728|\n|         119.0|    4.633399963|     [4.633399963]| 108.85595580495058|\n|         122.0|    4.571100235|     [4.571100235]|  111.2726503397898|\n|         124.0|    4.557899952|     [4.557899952]| 111.78470798126833|\n|         128.0|    4.392199993|     [4.392199993]| 118.21244367440633|\n|         129.0|    4.374599934|     [4.374599934]| 118.89517484777755|\n|         132.0|    4.308100224|     [4.308100224]| 121.47479262276039|\n|         134.0|    4.288599968|     [4.288599968]| 122.23123512445426|\n|         139.0|    3.926399946|     [3.926399946]|  136.2814860932235|\n+--------------+---------------+------------------+-------------------+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://spark-m.us-central1-c.c.my-project-342303.internal:42435/jobs/job?id=207",
+              "$$hashKey": "object:46363"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1653430892274_884080407",
+      "id": "20220524-203846_919511183",
+      "dateCreated": "2022-05-24T22:21:32+0000",
+      "dateStarted": "2022-05-24T22:27:12+0000",
+      "dateFinished": "2022-05-24T22:27:12+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:43044"
+    },
+    {
+      "text": "%md\n-- Remember, the directory SHOULD NOT EXIST, remove it first if it does\n-- On HDFS:\nhadoop fs -rm -r /BigData/happiness/output/\n-- On local:\nrm -r /var/tmp/output\n-- Once the model has made predictions, we are just selecting the \"Happiness Rank\", \"Happiness Socre\" and the prediction column from the model\n-- and write it as a CSV file in a location in HDFS",
+      "user": "anonymous",
+      "dateUpdated": "2022-05-24T22:27:12+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<p>&ndash; Remember, the directory SHOULD NOT EXIST, remove it first if it does<br />\n&ndash; On HDFS:<br />\nhadoop fs -rm -r /BigData/happiness/output/<br />\n&ndash; On local:<br />\nrm -r /var/tmp/output<br />\n&ndash; Once the model has made predictions, we are just selecting the &ldquo;Happiness Rank&rdquo;, &ldquo;Happiness Socre&rdquo; and the prediction column from the model<br />\n&ndash; and write it as a CSV file in a location in HDFS</p>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1653430892274_1820642944",
+      "id": "20220524-191500_1941255526",
+      "dateCreated": "2022-05-24T22:21:32+0000",
+      "dateStarted": "2022-05-24T22:27:12+0000",
+      "dateFinished": "2022-05-24T22:27:12+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:43045"
+    },
+    {
+      "text": "%sh\nrm -r /var/tmp/output",
+      "user": "anonymous",
+      "dateUpdated": "2022-05-24T22:27:12+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sh",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sh",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1653430892274_2080033862",
+      "id": "20220524-192509_1025607743",
+      "dateCreated": "2022-05-24T22:21:32+0000",
+      "dateStarted": "2022-05-24T22:27:12+0000",
+      "dateFinished": "2022-05-24T22:27:12+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:43046"
+    },
+    {
+      "text": "%sh\nls /var/tmp",
+      "user": "anonymous",
+      "dateUpdated": "2022-05-24T22:27:12+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "county_facts.csv\r\ncounty_facts_dictionary.csv\r\nfluentd.dataproc.agent.pos\nfluentd.dataproc.dpms-proxy.pos\nfluentd.dataproc.hadoop.pos\nfluentd.dataproc.metadata-proxy.pos\nfluentd.dataproc.startup.pos\nfluentd.dataproc.yarn-userlogs.pos\nhappiness.csv\nhive-scratch\nprimary_results.csv\r\nsystemd-private-d6fd211a7444426a83b561f87b390e83-chrony.service-foMYKx\nsystemd-private-d6fd211a7444426a83b561f87b390e83-haveged.service-oHcN1X\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1653431093832_156850528",
+      "id": "paragraph_1653431093832_156850528",
+      "dateCreated": "2022-05-24T22:24:53+0000",
+      "dateStarted": "2022-05-24T22:27:13+0000",
+      "dateFinished": "2022-05-24T22:27:13+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:43047"
+    },
+    {
+      "text": "predictions\n .select(col(\"Happiness Rank\"), col(\"Happiness Score\"), col(\"prediction\"))\n .write\n .format(\"csv\")\n .save(\"file:///var/tmp/output1\")",
+      "user": "anonymous",
+      "dateUpdated": "2022-05-24T22:27:32+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "editorHide": false,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "ERROR",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "org.apache.spark.sql.AnalysisException: path file:/var/tmp/output1 already exists.\n  at org.apache.spark.sql.execution.datasources.InsertIntoHadoopFsRelationCommand.run(InsertIntoHadoopFsRelationCommand.scala:122)\n  at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult$lzycompute(commands.scala:108)\n  at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult(commands.scala:106)\n  at org.apache.spark.sql.execution.command.DataWritingCommandExec.doExecute(commands.scala:131)\n  at org.apache.spark.sql.execution.SparkPlan.$anonfun$execute$1(SparkPlan.scala:180)\n  at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeQuery$1(SparkPlan.scala:218)\n  at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)\n  at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:215)\n  at org.apache.spark.sql.execution.SparkPlan.execute(SparkPlan.scala:176)\n  at org.apache.spark.sql.execution.QueryExecution.toRdd$lzycompute(QueryExecution.scala:132)\n  at org.apache.spark.sql.execution.QueryExecution.toRdd(QueryExecution.scala:131)\n  at org.apache.spark.sql.DataFrameWriter.$anonfun$runCommand$1(DataFrameWriter.scala:989)\n  at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$5(SQLExecution.scala:103)\n  at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:163)\n  at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:90)\n  at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)\n  at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:64)\n  at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:989)\n  at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:438)\n  at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:415)\n  at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:293)\n  ... 62 elided\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://spark-m.us-central1-c.c.my-project-342303.internal:42435/jobs/job?id=209",
+              "$$hashKey": "object:46415"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1653430892274_2127559872",
+      "id": "20220524-191502_1603173065",
+      "dateCreated": "2022-05-24T22:21:32+0000",
+      "dateStarted": "2022-05-24T22:27:32+0000",
+      "dateFinished": "2022-05-24T22:27:32+0000",
+      "status": "ERROR",
+      "$$hashKey": "object:43048"
+    },
+    {
+      "text": "%md\n-- Finally, we call the evaluator method on the evaluator passing the preditions DataFrame\n-- It will give us back the r2 result\n-- R2 is presented as a percentage, if we get 0.9, means our model is 90% accurate",
+      "user": "anonymous",
+      "dateUpdated": "2022-05-24T22:21:32+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<p>&ndash; Finally, we call the evaluator method on the evaluator passing the preditions DataFrame<br/>&ndash; It will give us back the r2 result<br/>&ndash; R2 is presented as a percentage, if we get 0.9, means our model is 90% accurate</p>\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1653430892274_96219957",
+      "id": "20220524-192127_702290693",
+      "dateCreated": "2022-05-24T22:21:32+0000",
+      "status": "READY",
+      "$$hashKey": "object:43049"
+    },
+    {
+      "text": "%spark\nval r2 = evaluator.evaluate(predictions)\nprintln(\"r-squared on test data = \" + r2)",
+      "user": "anonymous",
+      "dateUpdated": "2022-05-24T22:27:43+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "r-squared on test data = 0.9667320169691033\n\u001b[1m\u001b[34mr2\u001b[0m: \u001b[1m\u001b[32mDouble\u001b[0m = 0.9667320169691033\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://spark-m.us-central1-c.c.my-project-342303.internal:42435/jobs/job?id=210",
+              "$$hashKey": "object:46530"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1653430892274_1223645122",
+      "id": "20220524-192240_317981401",
+      "dateCreated": "2022-05-24T22:21:32+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:43050",
+      "dateFinished": "2022-05-24T22:27:43+0000",
+      "dateStarted": "2022-05-24T22:27:43+0000"
+    },
+    {
+      "text": "%spark\n",
+      "user": "anonymous",
+      "dateUpdated": "2022-05-24T22:27:43+0000",
+      "progress": 0,
+      "config": {
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1653431263230_789720455",
+      "id": "paragraph_1653431263230_789720455",
+      "dateCreated": "2022-05-24T22:27:43+0000",
+      "status": "READY",
+      "focus": true,
+      "$$hashKey": "object:46420"
+    }
+  ],
+  "name": "Spark_Regression_Happiness",
+  "id": "2H32SMR9D",
+  "defaultInterpreterGroup": "spark",
+  "version": "0.9.1-SNAPSHOT",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {},
+  "config": {
+    "isZeppelinNotebookCronEnable": false,
+    "looknfeel": "default",
+    "personalizedMode": "false"
+  },
+  "info": {
+    "isRunning": true
+  },
+  "path": "/Spark_Regression_Happiness"
+}
