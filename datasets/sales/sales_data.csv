@@ -1,0 +1,31 @@
+order_id,city,province,product_name,product_price,quantity
+1,Toronto,Ontario,Shirt_A,35.99,5
+2,Ottawa,Ontario,Shirt_A,40.99,10
+3,Montreal,Quebec,Shirt_B,25.99,3
+4,Quebec City,Quebec,Shirt_B,20.99,8
+5,Vancouver,British Columbia,Shirt_C,30.99,6
+6,Victoria,British Columbia,Shirt_C,35.99,2
+7,Toronto,Ontario,Shirt_D,18.99,7
+8,Ottawa,Ontario,Shirt_D,22.99,12
+9,Montreal,Quebec,Shirt_E,15.99,15
+10,Quebec City,Quebec,Shirt_E,40.99,3
+11,Vancouver,British Columbia,Shirt_A,25.99,5
+12,Victoria,British Columbia,Shirt_A,30.99,1
+13,Toronto,Ontario,Shirt_B,28.99,9
+14,Ottawa,Ontario,Shirt_B,18.99,7
+15,Montreal,Quebec,Shirt_C,32.99,4
+16,Quebec City,Quebec,Shirt_C,20.99,10
+17,Vancouver,British Columbia,Shirt_D,12.99,8
+18,Victoria,British Columbia,Shirt_D,25.99,6
+19,Toronto,Ontario,Shirt_E,15.99,3
+20,Ottawa,Ontario,Shirt_E,40.99,3
+21,Montreal,Quebec,Shirt_A,35.99,5
+22,Quebec City,Quebec,Shirt_A,50.99,1
+23,Vancouver,British Columbia,Shirt_B,28.99,9
+24,Victoria,British Columbia,Shirt_B,18.99,7
+25,Toronto,Ontario,Shirt_C,32.99,4
+26,Ottawa,Ontario,Shirt_C,20.99,10
+27,Montreal,Quebec,Shirt_D,12.99,8
+28,Quebec City,Quebec,Shirt_D,25.99,6
+29,Vancouver,British Columbia,Shirt_E,15.99,3
+30,Victoria,British Columbia,Shirt_E,40.99,3
