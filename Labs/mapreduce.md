@@ -13,7 +13,7 @@
 
 ## Step 2: Download input file from Github
 1. SSH into the master node of your cluster: `gcloud compute ssh <cluster-name>-m`.
-2. Download the input file from Github using wget: `wget https://raw.githubusercontent.com/<username>/<repo>/<branch>/input.txt`
+2. Download the input file from Github using wget: `wget https://raw.githubusercontent.com/tofighi/BigData/main/datasets/mapreduce/input.txt`
 3. Put the input file in the / directory of HDFS: `hadoop fs -put input.txt /`
 
 ## Step 3: Run the MapReduce job
