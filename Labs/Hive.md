@@ -31,7 +31,13 @@
 
 1. Count the total number of rows in the table by running the command `SELECT COUNT(*) FROM sales_data;`.
 2. Find the top 3 products by running the command `SELECT product_name, SUM(product_price * quantity) as total_sales FROM sales_data GROUP BY product_name ORDER BY total_sales DESC LIMIT 3;`.
-3. Create a new clean table by removing all rows that contain missing values in quantity or product_price by running the command `CREATE TABLE clean_sales AS SELECT * FROM sales_data WHERE quantity IS NOT NULL AND product_price IS NOT NULL;`.
+
+> **Answer:** \
+> Shirt_B 1033.569990158081 \
+> Shirt_A 981.7300338745117 \
+> Shirt_C 941.6400108337402 
+
+4. Create a new clean table by removing all rows that contain missing values in quantity or product_price by running the command `CREATE TABLE clean_sales AS SELECT * FROM sales_data WHERE quantity IS NOT NULL AND product_price IS NOT NULL;`.
 
 ## Step 6: Hive Aggregation Operations
 
