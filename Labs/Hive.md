@@ -24,7 +24,7 @@
 - Open the Hive shell by running the command `hive` in the terminal.
 - Create a new database named "sales_db" by running the command `CREATE DATABASE sales_db;`
 - Use the database by running the command `USE sales_db;`
-- Create a new table named "sales_data" using the command `CREATE TABLE sales_data (order_id INT, city STRING, province STRING, product_name STRING, product_price FLOAT, quantity INT) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',';`
+- Create a new table named "sales_data" using the command `CREATE TABLE sales_data (order_id INT, city STRING, province STRING, product_name STRING, product_price FLOAT, quantity INT) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' tblproperties("skip.header.line.count"="1");`
 - Load the data from the "sales_data.csv" file into the table by running the command `LOAD DATA INPATH '/sales_data.csv' INTO TABLE sales_data;`
 
 ## Step 5: Basic Hive Operations
