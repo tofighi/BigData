@@ -67,6 +67,14 @@ Quebec  Shirt_D 19.489999771118164
 Quebec  Shirt_E 28.49000072479248
 
 4. Find the total quantity of each product sold in Toronto by running the command `SELECT product_name, SUM(quantity) as total_quantity FROM clean_sales WHERE city='Toronto' GROUP BY product_name;`.
+
+**Answer:**\
+Shirt_A 5
+Shirt_B 9
+Shirt_C 4
+Shirt_D 7
+Shirt_E 3
+
 5. Find the total sales by city by running the command `SELECT city, SUM(product_price * quantity) as total_sales FROM clean_sales GROUP BY city;`.
 6. Find the average price of each product in each city by running the command `SELECT city, product_name, AVG(product_price) as avg_price FROM clean_sales GROUP BY city, product_name;`.
 
