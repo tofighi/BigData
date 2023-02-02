@@ -44,28 +44,29 @@
 1. Find the total sales by province in order by running the command `SELECT province, SUM(product_price * quantity) as total_sales FROM clean_sales GROUP BY province ORDER BY total_sales;`.
 
 > **Answer:** \
-> Ontario 1905.3000259399414 \
-> Quebec  1441.3700103759766 \
+> Ontario                 1905.3000259399414 \
+> Quebec                  1441.3700103759766 \
 > British Columbia        1243.4999980926514
 
 2. Find the average price of each product by province by running the command `SELECT province, product_name, AVG(product_price) as avg_price FROM clean_sales GROUP BY province, product_name;`.
 
+**Result**
 <pre>
-British Columbia        Shirt_A 28.489999771118164
-British Columbia        Shirt_B 23.989999771118164
-British Columbia        Shirt_C 33.49000072479248
-British Columbia        Shirt_D 19.489999771118164
-British Columbia        Shirt_E 28.49000072479248
-Ontario                 Shirt_A 38.4900016784668
-Ontario                 Shirt_B 23.989999771118164
-Ontario                 Shirt_C 26.99000072479248
-Ontario                 Shirt_D 20.989999771118164
-Ontario                 Shirt_E 28.49000072479248
-Quebec                  Shirt_A 43.4900016784668
-Quebec                  Shirt_B 23.489999771118164
-Quebec                  Shirt_C 26.99000072479248
-Quebec                  Shirt_D 19.489999771118164
-Quebec                  Shirt_E 28.49000072479248 
+British Columbia        Shirt_A     28.489999771118164
+British Columbia        Shirt_B     23.989999771118164
+British Columbia        Shirt_C     33.49000072479248
+British Columbia        Shirt_D     19.489999771118164
+British Columbia        Shirt_E     28.49000072479248
+Ontario                 Shirt_A     38.4900016784668
+Ontario                 Shirt_B     23.989999771118164
+Ontario                 Shirt_C     26.99000072479248
+Ontario                 Shirt_D     20.989999771118164
+Ontario                 Shirt_E     28.49000072479248
+Quebec                  Shirt_A     43.4900016784668
+Quebec                  Shirt_B     23.489999771118164
+Quebec                  Shirt_C     26.99000072479248
+Quebec                  Shirt_D     19.489999771118164
+Quebec                  Shirt_E     28.49000072479248 
 </pre>
 
 3. Find the total quantity of each product sold in Toronto by running the command `SELECT product_name, SUM(quantity) as total_quantity FROM clean_sales WHERE city='Toronto' GROUP BY product_name;`.
