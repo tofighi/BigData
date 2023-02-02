@@ -29,3 +29,6 @@ order_id,city,province,product_name,product_price,quantity
 28,Quebec City,Quebec,Shirt_D,25.99,6
 29,Vancouver,British Columbia,Shirt_E,15.99,3
 30,Victoria,British Columbia,Shirt_E,40.99,3
+31,Victoria,British Columbia,Shirt_E,,3
+32,Ottawa,Ontario,Shirt_C,20.11,
+33,Quebec City,Quebec,Shirt_E,,
