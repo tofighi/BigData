@@ -37,7 +37,7 @@
 > Shirt_A 981.7300338745117 \
 > Shirt_C 941.6400108337402 
 
-4. Create a new clean table by removing all rows that contain missing values in quantity or product_price by running the command `CREATE TABLE clean_sales AS SELECT * FROM sales_data WHERE quantity IS NOT NULL AND product_price IS NOT NULL;`.
+3. Create a new clean table by removing all rows that contain missing values in quantity or product_price by running the command `CREATE TABLE clean_sales AS SELECT * FROM sales_data WHERE quantity IS NOT NULL AND product_price IS NOT NULL;`.
 
 ## Step 6: Hive Aggregation Operations
 
@@ -48,25 +48,27 @@
 > Quebec  1441.3700103759766 \
 > British Columbia        1243.4999980926514
 
-3. Find the average price of each product by province by running the command `SELECT province, product_name, AVG(product_price) as avg_price FROM clean_sales GROUP BY province, product_name;`.
-> **Answer** \
-> British Columbia        Shirt_A 28.489999771118164 \
-> British Columbia        Shirt_B 23.989999771118164 \
-> British Columbia        Shirt_C 33.49000072479248 \
-> British Columbia        Shirt_D 19.489999771118164 \
-> British Columbia        Shirt_E 28.49000072479248 \
-> Ontario Shirt_A 38.4900016784668 \
-> Ontario Shirt_B 23.989999771118164 \
-> Ontario Shirt_C 26.99000072479248 \
-> Ontario Shirt_D 20.989999771118164 \
-> Ontario Shirt_E 28.49000072479248 \
-> Quebec  Shirt_A 43.4900016784668 \
-> Quebec  Shirt_B 23.489999771118164 \
-> Quebec  Shirt_C 26.99000072479248 \
-> Quebec  Shirt_D 19.489999771118164 \
-> Quebec  Shirt_E 28.49000072479248 
+2. Find the average price of each product by province by running the command `SELECT province, product_name, AVG(product_price) as avg_price FROM clean_sales GROUP BY province, product_name;`.
 
-4. Find the total quantity of each product sold in Toronto by running the command `SELECT product_name, SUM(quantity) as total_quantity FROM clean_sales WHERE city='Toronto' GROUP BY product_name;`.
+<pre>
+British Columbia        Shirt_A 28.489999771118164
+British Columbia        Shirt_B 23.989999771118164
+British Columbia        Shirt_C 33.49000072479248
+British Columbia        Shirt_D 19.489999771118164
+British Columbia        Shirt_E 28.49000072479248
+Ontario                 Shirt_A 38.4900016784668
+Ontario                 Shirt_B 23.989999771118164
+Ontario                 Shirt_C 26.99000072479248
+Ontario                 Shirt_D 20.989999771118164
+Ontario                 Shirt_E 28.49000072479248
+Quebec                  Shirt_A 43.4900016784668
+Quebec                  Shirt_B 23.489999771118164
+Quebec                  Shirt_C 26.99000072479248
+Quebec                  Shirt_D 19.489999771118164
+Quebec                  Shirt_E 28.49000072479248 
+</pre>
+
+3. Find the total quantity of each product sold in Toronto by running the command `SELECT product_name, SUM(quantity) as total_quantity FROM clean_sales WHERE city='Toronto' GROUP BY product_name;`.
 
 <pre>
 **Answer:**\
@@ -77,8 +79,8 @@
 > Shirt_E 3
 </pre>
 
-5. Find the total sales by city by running the command `SELECT city, SUM(product_price * quantity) as total_sales FROM clean_sales GROUP BY city;`.
-6. Find the average price of each product in each city by running the command `SELECT city, product_name, AVG(product_price) as avg_price FROM clean_sales GROUP BY city, product_name;`.
+4. Find the total sales by city by running the command `SELECT city, SUM(product_price * quantity) as total_sales FROM clean_sales GROUP BY city;`.
+5. Find the average price of each product in each city by running the command `SELECT city, product_name, AVG(product_price) as avg_price FROM clean_sales GROUP BY city, product_name;`.
 
 ## Step 7: Cleanup
 - Drop the table by running the command `DROP TABLE sales_data;`
