@@ -30,18 +30,24 @@
 ## Step 5: Basic Hive Operations
 
 1. Count the total number of rows in the table by running the command `SELECT COUNT(*) FROM sales_data;`.
+
+**Result**
+<pre>
+33
+</pre>
+
 2. Find the top 3 products by running the command `SELECT product_name, SUM(product_price * quantity) as total_sales FROM sales_data GROUP BY product_name ORDER BY total_sales DESC LIMIT 3;`.
 
 **Result**
 <pre>
 Shirt_B  1033.569990158081
 Shirt_A  981.7300338745117
-Shirt_C   941.6400108337402
+Shirt_C  941.6400108337402
 </pre>
 
 3. Create a new clean table by removing all rows that contain missing values in quantity or product_price by running the command `CREATE TABLE clean_sales AS SELECT * FROM sales_data WHERE quantity IS NOT NULL AND product_price IS NOT NULL;`.
 
-## Step 6: Hive Aggregation Operations
+## Step 6: Hive Aggregation Operations on clean_sales Table
 
 1. Find the total sales by province in order by running the command `SELECT province, SUM(product_price * quantity) as total_sales FROM clean_sales GROUP BY province ORDER BY total_sales;`.
 
@@ -136,5 +142,3 @@ Montreal        Shirt_D       12.989999771118164
 - Drop the table by running the command `DROP TABLE sales_data;`
 - Drop the database by running the command `DROP DATABASE sales_db;`
 - Once you have finished the lab, you may delete the cluster to avoid incurring additional charges.
-
-Note: You can also use the gsutil command to move the csv file from local to google cloud storage and then use the GCS path for the load statement.
