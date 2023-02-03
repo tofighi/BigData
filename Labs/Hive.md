@@ -32,10 +32,12 @@
 1. Count the total number of rows in the table by running the command `SELECT COUNT(*) FROM sales_data;`.
 2. Find the top 3 products by running the command `SELECT product_name, SUM(product_price * quantity) as total_sales FROM sales_data GROUP BY product_name ORDER BY total_sales DESC LIMIT 3;`.
 
-> **Answer:** \
-> Shirt_B 1033.569990158081 \
-> Shirt_A 981.7300338745117 \
-> Shirt_C 941.6400108337402 
+**Result**
+<pre>
+Shirt_B  1033.569990158081
+Shirt_A  981.7300338745117
+Shirt_C   941.6400108337402
+</pre>
 
 3. Create a new clean table by removing all rows that contain missing values in quantity or product_price by running the command `CREATE TABLE clean_sales AS SELECT * FROM sales_data WHERE quantity IS NOT NULL AND product_price IS NOT NULL;`.
 
@@ -43,10 +45,12 @@
 
 1. Find the total sales by province in order by running the command `SELECT province, SUM(product_price * quantity) as total_sales FROM clean_sales GROUP BY province ORDER BY total_sales;`.
 
-> **Answer:** \
-> Ontario                 1905.3000259399414 \
-> Quebec                  1441.3700103759766 \
-> British Columbia        1243.4999980926514
+**Result**
+<pre>
+Ontario                 1905.3000259399414
+Quebec                  1441.3700103759766
+British Columbia        1243.4999980926514
+</pre>
 
 2. Find the average price of each product by province by running the command `SELECT province, product_name, AVG(product_price) as avg_price FROM clean_sales GROUP BY province, product_name;`.
 
@@ -71,13 +75,13 @@ Quebec                  Shirt_E     28.49000072479248
 
 3. Find the total quantity of each product sold in Toronto by running the command `SELECT product_name, SUM(quantity) as total_quantity FROM clean_sales WHERE city='Toronto' GROUP BY product_name;`.
 
+**Result**
 <pre>
-**Answer:**\
-> Shirt_A 5 \
-> Shirt_B 9 \
-> Shirt_C 4 \
-> Shirt_D 7 \
-> Shirt_E 3
+Shirt_A   5 
+Shirt_B   9 
+Shirt_C   4 
+Shirt_D   7 
+Shirt_E   3
 </pre>
 
 4. Find the total sales by city by running the command `SELECT city, SUM(product_price * quantity) as total_sales FROM clean_sales GROUP BY city;`.
