@@ -2,4 +2,4 @@ Hadoop is a big data framework
 Hadoop can store vast data
 Hadoop processes big data
 Hadoop can analyze vast data 
-Hadoob is easy
+Hadoop is easy
