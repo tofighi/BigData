@@ -31,15 +31,15 @@
 
 1. Count the total number of rows in the table by running the command `SELECT COUNT(*) FROM sales_data;`.
 
-**Result**
 <pre>
+<b>Result</b>
 33
 </pre>
 
 2. Find the top 3 products by running the command `SELECT product_name, SUM(product_price * quantity) as total_sales FROM sales_data GROUP BY product_name ORDER BY total_sales DESC LIMIT 3;`.
 
-**Result**
 <pre>
+<b>Result</b>
 Shirt_B  1033.569990158081
 Shirt_A  981.7300338745117
 Shirt_C  941.6400108337402
@@ -51,8 +51,8 @@ Shirt_C  941.6400108337402
 
 1. Find the total sales by province in order by running the command `SELECT province, SUM(product_price * quantity) as total_sales FROM clean_sales GROUP BY province ORDER BY total_sales;`.
 
-**Result**
 <pre>
+<b>Result</b>
 Ontario                 1905.3000259399414
 Quebec                  1441.3700103759766
 British Columbia        1243.4999980926514
@@ -60,8 +60,8 @@ British Columbia        1243.4999980926514
 
 2. Find the average price of each product by province by running the command `SELECT province, product_name, AVG(product_price) as avg_price FROM clean_sales GROUP BY province, product_name;`.
 
-**Result**
 <pre>
+<b>Result</b>
 British Columbia        Shirt_A     28.489999771118164
 British Columbia        Shirt_B     23.989999771118164
 British Columbia        Shirt_C     33.49000072479248
@@ -81,8 +81,8 @@ Quebec                  Shirt_E     28.49000072479248
 
 3. Find the total quantity of each product sold in Toronto by running the command `SELECT product_name, SUM(quantity) as total_quantity FROM clean_sales WHERE city='Toronto' GROUP BY product_name;`.
 
-**Result**
 <pre>
+<b>Result</b>
 Shirt_A   5 
 Shirt_B   9 
 Shirt_C   4 
@@ -92,8 +92,8 @@ Shirt_E   3
 
 4. Find the total sales by city by running the command `SELECT city, SUM(product_price * quantity) as total_sales FROM clean_sales GROUP BY city ORDER BY total_sales DESC;`.
 
-**Result**
 <pre>
+<b>Result</b>
 Ottawa          1151.5800151824951
 Toronto         753.7200107574463
 Montreal        733.6500091552734
@@ -104,8 +104,8 @@ Victoria        514.8100051879883
 
 5. Find the average price of each product in each city by running the command `SELECT city, product_name, AVG(product_price) as avg_price FROM clean_sales GROUP BY city, product_name ORDER BY avg_price DESC;`.
 
-**Result**
 <pre>
+<b>Result</b>
 Quebec City     Shirt_A       50.9900016784668
 Ottawa          Shirt_A       40.9900016784668
 Victoria        Shirt_E       40.9900016784668
