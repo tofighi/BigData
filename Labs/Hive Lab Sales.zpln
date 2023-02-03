@@ -1,0 +1,1299 @@
+﻿{
+  "paragraphs": [
+    {
+      "text": "%md\n# Hive Lab: Analyzing Sales Data with Hive on Google Dataproc\n\n## Objective: \n- To understand the basic concepts of Apache Hive, including creating tables, loading data and perform different aggregation operations on a sales data set using Google Dataproc cluster.\n\n## Prerequisites: \n- A Google Cloud Platform account with access to Dataproc.\n- Familiarity with the command line interface\n\n## Step 1: Create a Dataproc Cluster\n- Log in to your Google Cloud Platform account and navigate to the Dataproc dashboard.\n- Click on the \"Create cluster\" button to create a new cluster with the default settings.\n- SSH into the cluster's master node\n\n## Step 2: Download sales data\n- Use the command `wget https://raw.githubusercontent.com/tofighi/BigData/main/datasets/sales/sales_data.csv -P /var/tmp` to download the sales_data.csv file from the GitHub repository and save it in the /var/tmp directory\n- Verify that the file has been downloaded by running the command `ls /var/tmp/sales_data.csv`",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-03T06:33:21+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h1>Hive Lab: Analyzing Sales Data with Hive on Google Dataproc</h1>\n<h2>Objective:</h2>\n<ul>\n<li>To understand the basic concepts of Apache Hive, including creating tables, loading data and perform different aggregation operations on a sales data set using Google Dataproc cluster.</li>\n</ul>\n<h2>Prerequisites:</h2>\n<ul>\n<li>A Google Cloud Platform account with access to Dataproc.</li>\n<li>Familiarity with the command line interface</li>\n</ul>\n<h2>Step 1: Create a Dataproc Cluster</h2>\n<ul>\n<li>Log in to your Google Cloud Platform account and navigate to the Dataproc dashboard.</li>\n<li>Click on the &ldquo;Create cluster&rdquo; button to create a new cluster with the default settings.</li>\n<li>SSH into the cluster&rsquo;s master node</li>\n</ul>\n<h2>Step 2: Download sales data</h2>\n<ul>\n<li>Use the command <code>wget https://raw.githubusercontent.com/tofighi/BigData/main/datasets/sales/sales_data.csv -P /var/tmp</code> to download the sales_data.csv file from the GitHub repository and save it in the /var/tmp directory</li>\n<li>Verify that the file has been downloaded by running the command <code>ls /var/tmp/sales_data.csv</code></li>\n</ul>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675403530699_1406137191",
+      "id": "paragraph_1675403530699_1406137191",
+      "dateCreated": "2023-02-03T05:52:10+0000",
+      "dateStarted": "2023-02-03T06:33:21+0000",
+      "dateFinished": "2023-02-03T06:33:21+0000",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:4486"
+    },
+    {
+      "text": "%sh\nwget https://raw.githubusercontent.com/tofighi/BigData/main/datasets/sales/sales_data.csv -P /var/tmp\nls /var/tmp/sales_data.csv",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-03T05:59:41+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sh",
+          "editOnDblClick": false,
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sh",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "--2023-02-03 05:59:41--  https://raw.githubusercontent.com/tofighi/BigData/main/datasets/sales/sales_data.csv\nResolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.110.133, 185.199.109.133, 185.199.108.133, ...\nConnecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.110.133|:443... connected.\nHTTP request sent, awaiting response... 200 OK\nLength: 1325 (1.3K) [text/plain]\nSaving to: ‘/var/tmp/sales_data.csv’\n\n     0K .                                                     100% 89.1M=0s\n\n2023-02-03 05:59:41 (89.1 MB/s) - ‘/var/tmp/sales_data.csv’ saved [1325/1325]\n\n/var/tmp/sales_data.csv\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675403587902_1827065642",
+      "id": "paragraph_1675403587902_1827065642",
+      "dateCreated": "2023-02-03T05:53:07+0000",
+      "dateStarted": "2023-02-03T05:59:41+0000",
+      "dateFinished": "2023-02-03T05:59:41+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:4487"
+    },
+    {
+      "text": "%md\n## Step 3: Move the file to HDFS\n- Move the downloaded file to HDFS by using the command `hadoop fs -put /var/tmp/sales_data.csv /`\n- Verify that the file has been moved to HDFS by running the command `hadoop fs -ls /`\n\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-03T06:00:16+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h2>Step 3: Move the file to HDFS</h2>\n<ul>\n<li>Move the downloaded file to HDFS by using the command <code>hadoop fs -put /var/tmp/sales_data.csv /</code></li>\n<li>Verify that the file has been moved to HDFS by running the command <code>hadoop fs -ls /</code></li>\n</ul>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675403992860_1915839982",
+      "id": "paragraph_1675403992860_1915839982",
+      "dateCreated": "2023-02-03T05:59:52+0000",
+      "dateStarted": "2023-02-03T06:00:16+0000",
+      "dateFinished": "2023-02-03T06:00:16+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:4488"
+    },
+    {
+      "text": "%sh\nhadoop fs -put /var/tmp/sales_data.csv /\nhadoop fs -ls /",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-03T06:00:29+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sh",
+          "editOnDblClick": false,
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sh",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Found 4 items\n-rw-r--r--   2 zeppelin hadoop       1325 2023-02-03 06:00 /sales_data.csv\ndrwxrwxrwt   - hdfs     hadoop          0 2023-01-31 23:39 /tmp\ndrwxrwxrwt   - hdfs     hadoop          0 2023-01-31 23:38 /user\ndrwxrwxrwt   - hdfs     hadoop          0 2023-01-31 23:38 /var\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675403875363_246144909",
+      "id": "paragraph_1675403875363_246144909",
+      "dateCreated": "2023-02-03T05:57:55+0000",
+      "dateStarted": "2023-02-03T06:00:29+0000",
+      "dateFinished": "2023-02-03T06:00:33+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:4489"
+    },
+    {
+      "text": "%md\n## Step 4: Create a Hive database and table\n- Create a new database named \"sales_db\" by running the command `CREATE DATABASE sales_db;`\n- Use the database by running the command `USE sales_db;`\n- Create a new table named \"sales_data\" using the command `CREATE TABLE sales_data (order_id INT, city STRING, province STRING, product_name STRING, product_price FLOAT, quantity INT) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' tblproperties(\"skip.header.line.count\"=\"1\");`\n- Load the data from the \"sales_data.csv\" file into the table by running the command `LOAD DATA INPATH '/sales_data.csv' INTO TABLE sales_data;`",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-03T06:02:21+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h2>Step 4: Create a Hive database and table</h2>\n<ul>\n<li>Create a new database named &ldquo;sales_db&rdquo; by running the command <code>CREATE DATABASE sales_db;</code></li>\n<li>Use the database by running the command <code>USE sales_db;</code></li>\n<li>Create a new table named &ldquo;sales_data&rdquo; using the command <code>CREATE TABLE sales_data (order_id INT, city STRING, province STRING, product_name STRING, product_price FLOAT, quantity INT) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' tblproperties(&quot;skip.header.line.count&quot;=&quot;1&quot;);</code></li>\n<li>Load the data from the &ldquo;sales_data.csv&rdquo; file into the table by running the command <code>LOAD DATA INPATH '/sales_data.csv' INTO TABLE sales_data;</code></li>\n</ul>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675404029337_2046654593",
+      "id": "paragraph_1675404029337_2046654593",
+      "dateCreated": "2023-02-03T06:00:29+0000",
+      "dateStarted": "2023-02-03T06:02:21+0000",
+      "dateFinished": "2023-02-03T06:02:21+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:4490"
+    },
+    {
+      "text": "%hive\nCREATE DATABASE sales_db;\nUSE sales_db;\nCREATE TABLE sales_data (order_id INT, city STRING, province STRING, product_name STRING, product_price FLOAT, quantity INT) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' tblproperties(\"skip.header.line.count\"=\"1\");\nLOAD DATA INPATH '/sales_data.csv' INTO TABLE sales_data;",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-03T06:02:18+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Query executed successfully. Affected rows : -1\n\n"
+          },
+          {
+            "type": "TEXT",
+            "data": "Query executed successfully. Affected rows : -1\n\n"
+          },
+          {
+            "type": "TEXT",
+            "data": "Query executed successfully. Affected rows : -1\n\n"
+          },
+          {
+            "type": "TEXT",
+            "data": "Query executed successfully. Affected rows : -1\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675404060398_1562991442",
+      "id": "paragraph_1675404060398_1562991442",
+      "dateCreated": "2023-02-03T06:01:00+0000",
+      "dateStarted": "2023-02-03T06:02:18+0000",
+      "dateFinished": "2023-02-03T06:02:23+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:4491"
+    },
+    {
+      "text": "%md\n\n## Step 5: Basic Hive Operations\n1. Count the total number of rows in the table by running the command `SELECT COUNT(*) FROM sales_db.sales_data;`.\n<pre>\n<b>Result</b>\n33\n</pre>",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-03T06:05:31+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h2>Step 5: Basic Hive Operations</h2>\n<ol>\n<li>Count the total number of rows in the table by running the command <code>SELECT COUNT(*) FROM sales_db.sales_data;</code>.</li>\n</ol>\n<pre>\n<b>Result</b>\n33\n</pre>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675404171541_1966009838",
+      "id": "paragraph_1675404171541_1966009838",
+      "dateCreated": "2023-02-03T06:02:51+0000",
+      "dateStarted": "2023-02-03T06:05:31+0000",
+      "dateFinished": "2023-02-03T06:05:31+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:4492"
+    },
+    {
+      "text": "%hive\nSELECT COUNT(*) FROM sales_db.sales_data;",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-03T06:05:52+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {
+          "1": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "_c0": "string"
+                    },
+                    "updated": true
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "INFO  : Compiling command(queryId=hive_20230203060533_3affeb23-882d-4d9c-90d5-3a6dfcb30ffb): \nSELECT COUNT(*) FROM sales_db.sales_data\nINFO  : Concurrency mode is disabled, not creating a lock manager\nINFO  : Semantic Analysis Completed (retrial = false)\nINFO  : Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:_c0, type:bigint, comment:null)], properties:null)\nINFO  : Completed compiling command(queryId=hive_20230203060533_3affeb23-882d-4d9c-90d5-3a6dfcb30ffb); Time taken: 1.683 seconds\nINFO  : Concurrency mode is disabled, not creating a lock manager\nINFO  : Executing command(queryId=hive_20230203060533_3affeb23-882d-4d9c-90d5-3a6dfcb30ffb): \nSELECT COUNT(*) FROM sales_db.sales_data\nINFO  : Query ID = hive_20230203060533_3affeb23-882d-4d9c-90d5-3a6dfcb30ffb\nINFO  : Total jobs = 1\nINFO  : Launching Job 1 out of 1\nINFO  : Starting task [Stage-1:MAPRED] in serial mode\nINFO  : Subscribed to counters: [] for queryId: hive_20230203060533_3affeb23-882d-4d9c-90d5-3a6dfcb30ffb\nINFO  : Tez session hasn't been created yet. Opening session\n"
+          },
+          {
+            "type": "TABLE",
+            "data": "_c0\n33\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675404226565_856905888",
+      "id": "paragraph_1675404226565_856905888",
+      "dateCreated": "2023-02-03T06:03:46+0000",
+      "dateStarted": "2023-02-03T06:05:33+0000",
+      "dateFinished": "2023-02-03T06:05:52+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:4493"
+    },
+    {
+      "text": "%md\n2. Find the top 3 products by running the command `SELECT product_name, SUM(product_price * quantity) as total_sales FROM sales_db.sales_data GROUP BY product_name ORDER BY total_sales DESC LIMIT 3;`.\n\n<pre>\n<b>Result</b>\nShirt_B  1033.569990158081\nShirt_A  981.7300338745117\nShirt_C  941.6400108337402\n</pre>\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-03T06:16:35+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": true,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": false,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<ol start=\"2\">\n<li>Find the top 3 products by running the command <code>SELECT product_name, SUM(product_price * quantity) as total_sales FROM sales_db.sales_data GROUP BY product_name ORDER BY total_sales DESC LIMIT 3;</code>.</li>\n</ol>\n<pre>\n<b>Result</b>\nShirt_B  1033.569990158081\nShirt_A  981.7300338745117\nShirt_C  941.6400108337402\n</pre>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675404602578_2071586400",
+      "id": "paragraph_1675404602578_2071586400",
+      "dateCreated": "2023-02-03T06:10:02+0000",
+      "dateStarted": "2023-02-03T06:10:10+0000",
+      "dateFinished": "2023-02-03T06:10:10+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:4494"
+    },
+    {
+      "text": "%hive\nSELECT product_name, SUM(product_price * quantity) as total_sales FROM sales_db.sales_data GROUP BY product_name ORDER BY total_sales DESC LIMIT 3;",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-03T06:22:01+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {
+          "1": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "product_name": "string",
+                      "total_sales": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "INFO  : Compiling command(queryId=hive_20230203060928_2460891e-c62b-403a-8011-96482e35c24b): \nSELECT product_name, SUM(product_price * quantity) as total_sales FROM sales_db.sales_data GROUP BY product_name ORDER BY total_sales DESC LIMIT 3\nINFO  : Concurrency mode is disabled, not creating a lock manager\nINFO  : Semantic Analysis Completed (retrial = false)\nINFO  : Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:product_name, type:string, comment:null), FieldSchema(name:total_sales, type:double, comment:null)], properties:null)\nINFO  : Completed compiling command(queryId=hive_20230203060928_2460891e-c62b-403a-8011-96482e35c24b); Time taken: 0.272 seconds\nINFO  : Concurrency mode is disabled, not creating a lock manager\nINFO  : Executing command(queryId=hive_20230203060928_2460891e-c62b-403a-8011-96482e35c24b): \nSELECT product_name, SUM(product_price * quantity) as total_sales FROM sales_db.sales_data GROUP BY product_name ORDER BY total_sales DESC LIMIT 3\nINFO  : Query ID = hive_20230203060928_2460891e-c62b-403a-8011-96482e35c24b\nINFO  : Total jobs = 1\nINFO  : Launching Job 1 out of 1\nINFO  : Starting task [Stage-1:MAPRED] in serial mode\nINFO  : Subscribed to counters: [] for queryId: hive_20230203060928_2460891e-c62b-403a-8011-96482e35c24b\nINFO  : Tez session hasn't been created yet. Opening session\n"
+          },
+          {
+            "type": "TABLE",
+            "data": "product_name\ttotal_sales\nShirt_B\t1033.569990158081\nShirt_A\t981.7300338745117\nShirt_C\t941.6400108337402\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675404295849_120165708",
+      "id": "paragraph_1675404295849_120165708",
+      "dateCreated": "2023-02-03T06:04:55+0000",
+      "dateStarted": "2023-02-03T06:09:28+0000",
+      "dateFinished": "2023-02-03T06:09:43+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:4495"
+    },
+    {
+      "text": "%md\n### Create a new clean table\n3. Create a new clean table by removing all rows that contain missing values in quantity or product_price by running the command `CREATE TABLE clean_sales AS SELECT * FROM sales_db.sales_data WHERE quantity IS NOT NULL AND product_price IS NOT NULL;`.\n4. Find the number of remaining records in clean_sales by running the command `CREATE TABLE clean_sales AS SELECT * FROM sales_db.clean_sales WHERE quantity IS NOT NULL AND product_price IS NOT NULL;`.\n<pre>\n<b>Result</b>\n30\n</pre>\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-03T06:16:53+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h3>Create a new clean table</h3>\n<ol start=\"3\">\n<li>Create a new clean table by removing all rows that contain missing values in quantity or product_price by running the command <code>CREATE TABLE clean_sales AS SELECT * FROM sales_db.sales_data WHERE quantity IS NOT NULL AND product_price IS NOT NULL;</code>.</li>\n<li>Find the number of remaining records in clean_sales by running the command <code>CREATE TABLE clean_sales AS SELECT * FROM sales_db.clean_sales WHERE quantity IS NOT NULL AND product_price IS NOT NULL;</code>.</li>\n</ol>\n<pre>\n<b>Result</b>\n30\n</pre>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675404657656_1406321645",
+      "id": "paragraph_1675404657656_1406321645",
+      "dateCreated": "2023-02-03T06:10:57+0000",
+      "dateStarted": "2023-02-03T06:16:53+0000",
+      "dateFinished": "2023-02-03T06:16:53+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:4496"
+    },
+    {
+      "text": "%hive\nUSE sales_db;\nCREATE TABLE clean_sales AS SELECT * FROM sales_db.sales_data WHERE quantity IS NOT NULL AND product_price IS NOT NULL;",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-03T06:16:10+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Query executed successfully. Affected rows : -1\nINFO  : Compiling command(queryId=hive_20230203061611_a4be9b01-016e-4341-99b8-57c2c1c019f2): \n\nCREATE TABLE clean_sales AS SELECT * FROM sales_db.sales_data WHERE quantity IS NOT NULL AND product_price IS NOT NULL\nINFO  : Concurrency mode is disabled, not creating a lock manager\nINFO  : Semantic Analysis Completed (retrial = false)\nINFO  : Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:sales_data.order_id, type:int, comment:null), FieldSchema(name:sales_data.city, type:string, comment:null), FieldSchema(name:sales_data.province, type:string, comment:null), FieldSchema(name:sales_data.product_name, type:string, comment:null), FieldSchema(name:sales_data.product_price, type:float, comment:null), FieldSchema(name:sales_data.quantity, type:int, comment:null)], properties:null)\nINFO  : Completed compiling command(queryId=hive_20230203061611_a4be9b01-016e-4341-99b8-57c2c1c019f2); Time taken: 0.127 seconds\nINFO  : Concurrency mode is disabled, not creating a lock manager\nINFO  : Executing command(queryId=hive_20230203061611_a4be9b01-016e-4341-99b8-57c2c1c019f2): \n\nCREATE TABLE clean_sales AS SELECT * FROM sales_db.sales_data WHERE quantity IS NOT NULL AND product_price IS NOT NULL\nINFO  : Query ID = hive_20230203061611_a4be9b01-016e-4341-99b8-57c2c1c019f2\nINFO  : Total jobs = 1\nINFO  : Launching Job 1 out of 1\nINFO  : Starting task [Stage-1:MAPRED] in serial mode\nINFO  : Subscribed to counters: [] for queryId: hive_20230203061611_a4be9b01-016e-4341-99b8-57c2c1c019f2\nINFO  : Tez session hasn't been created yet. Opening session\n\n"
+          },
+          {
+            "type": "TEXT",
+            "data": "Query executed successfully. Affected rows : -1\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675404696482_127343652",
+      "id": "paragraph_1675404696482_127343652",
+      "dateCreated": "2023-02-03T06:11:36+0000",
+      "dateStarted": "2023-02-03T06:16:10+0000",
+      "dateFinished": "2023-02-03T06:16:24+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:4497"
+    },
+    {
+      "text": "%hive\nSELECT COUNT(*) FROM sales_db.clean_sales;\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-03T06:22:00+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "_c0": "string"
+                    },
+                    "updated": true
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "_c0\n30\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675404711237_78791015",
+      "id": "paragraph_1675404711237_78791015",
+      "dateCreated": "2023-02-03T06:11:51+0000",
+      "dateStarted": "2023-02-03T06:16:26+0000",
+      "dateFinished": "2023-02-03T06:16:27+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:4498"
+    },
+    {
+      "text": "%md\n## Step 6: Hive Aggregation Operations on clean_sales Table\n\n1. Find the total sales by province in order by running the command `SELECT province, SUM(product_price * quantity) as total_sales FROM clean_sales GROUP BY province ORDER BY total_sales DESC;`.\n\n<pre>\n<b>Result</b>\nBritish Columbia        1243.4999980926514\nQuebec                  1441.3700103759766\nOntario                 1905.3000259399414\n</pre>\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-03T06:21:25+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h2>Step 6: Hive Aggregation Operations on clean_sales Table</h2>\n<ol>\n<li>Find the total sales by province in order by running the command <code>SELECT province, SUM(product_price * quantity) as total_sales FROM clean_sales GROUP BY province ORDER BY total_sales DESC;</code>.</li>\n</ol>\n<pre>\n<b>Result</b>\nBritish Columbia        1243.4999980926514\nQuebec                  1441.3700103759766\nOntario                 1905.3000259399414\n</pre>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675404781430_1147194561",
+      "id": "paragraph_1675404781430_1147194561",
+      "dateCreated": "2023-02-03T06:13:01+0000",
+      "dateStarted": "2023-02-03T06:21:25+0000",
+      "dateFinished": "2023-02-03T06:21:25+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:4499"
+    },
+    {
+      "text": "%hive\nSELECT province, SUM(product_price * quantity) as total_sales FROM clean_sales GROUP BY province ORDER BY total_sales DESC;",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-03T06:20:14+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {
+          "1": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {
+                    "columns": [
+                      {
+                        "name": "province0",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {},
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      },
+                      {
+                        "name": "total_sales1",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {
+                          "priority": 0,
+                          "direction": "asc"
+                        },
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      }
+                    ],
+                    "scrollFocus": {},
+                    "selection": [],
+                    "grouping": {
+                      "grouping": [],
+                      "aggregations": [],
+                      "rowExpandedStates": {}
+                    },
+                    "treeView": {},
+                    "pagination": {
+                      "paginationCurrentPage": 1,
+                      "paginationPageSize": 250
+                    }
+                  },
+                  "tableColumnTypeState": {
+                    "names": {
+                      "province": "string",
+                      "total_sales": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "INFO  : Compiling command(queryId=hive_20230203062014_55621a3e-43de-4017-b58a-c7e3de8aeacc): \nSELECT province, SUM(product_price * quantity) as total_sales FROM clean_sales GROUP BY province ORDER BY total_sales DESC\nINFO  : Concurrency mode is disabled, not creating a lock manager\nINFO  : Semantic Analysis Completed (retrial = false)\nINFO  : Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:province, type:string, comment:null), FieldSchema(name:total_sales, type:double, comment:null)], properties:null)\nINFO  : Completed compiling command(queryId=hive_20230203062014_55621a3e-43de-4017-b58a-c7e3de8aeacc); Time taken: 0.162 seconds\nINFO  : Concurrency mode is disabled, not creating a lock manager\nINFO  : Executing command(queryId=hive_20230203062014_55621a3e-43de-4017-b58a-c7e3de8aeacc): \nSELECT province, SUM(product_price * quantity) as total_sales FROM clean_sales GROUP BY province ORDER BY total_sales DESC\nINFO  : Query ID = hive_20230203062014_55621a3e-43de-4017-b58a-c7e3de8aeacc\nINFO  : Total jobs = 1\nINFO  : Launching Job 1 out of 1\nINFO  : Starting task [Stage-1:MAPRED] in serial mode\nINFO  : Subscribed to counters: [] for queryId: hive_20230203062014_55621a3e-43de-4017-b58a-c7e3de8aeacc\nINFO  : Tez session hasn't been created yet. Opening session\n"
+          },
+          {
+            "type": "TABLE",
+            "data": "province\ttotal_sales\nOntario\t1905.3000259399414\nQuebec\t1441.3700103759766\nBritish Columbia\t1243.4999980926514\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675405042028_1432250460",
+      "id": "paragraph_1675405042028_1432250460",
+      "dateCreated": "2023-02-03T06:17:22+0000",
+      "dateStarted": "2023-02-03T06:20:14+0000",
+      "dateFinished": "2023-02-03T06:20:33+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:4500"
+    },
+    {
+      "text": "%md \n\n2. Find the average price of each product by province by running the command `SELECT province, product_name, AVG(product_price) as avg_price FROM sales_db.clean_sales GROUP BY province, product_name;`.\n\n<pre>\n<b>Result</b>\nBritish Columbia        Shirt_A     28.489999771118164\nBritish Columbia        Shirt_B     23.989999771118164\nBritish Columbia        Shirt_C     33.49000072479248\nBritish Columbia        Shirt_D     19.489999771118164\nBritish Columbia        Shirt_E     28.49000072479248\nOntario                 Shirt_A     38.4900016784668\nOntario                 Shirt_B     23.989999771118164\nOntario                 Shirt_C     26.99000072479248\nOntario                 Shirt_D     20.989999771118164\nOntario                 Shirt_E     28.49000072479248\nQuebec                  Shirt_A     43.4900016784668\nQuebec                  Shirt_B     23.489999771118164\nQuebec                  Shirt_C     26.99000072479248\nQuebec                  Shirt_D     19.489999771118164\nQuebec                  Shirt_E     28.49000072479248 \n</pre>",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-03T06:24:54+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675405354017_1404248183",
+      "id": "paragraph_1675405354017_1404248183",
+      "dateCreated": "2023-02-03T06:22:34+0000",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:5577",
+      "dateFinished": "2023-02-03T06:24:54+0000",
+      "dateStarted": "2023-02-03T06:24:54+0000",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<ol start=\"2\">\n<li>Find the average price of each product by province by running the command <code>SELECT province, product_name, AVG(product_price) as avg_price FROM sales_db.clean_sales GROUP BY province, product_name;</code>.</li>\n</ol>\n<pre>\n<b>Result</b>\nBritish Columbia        Shirt_A     28.489999771118164\nBritish Columbia        Shirt_B     23.989999771118164\nBritish Columbia        Shirt_C     33.49000072479248\nBritish Columbia        Shirt_D     19.489999771118164\nBritish Columbia        Shirt_E     28.49000072479248\nOntario                 Shirt_A     38.4900016784668\nOntario                 Shirt_B     23.989999771118164\nOntario                 Shirt_C     26.99000072479248\nOntario                 Shirt_D     20.989999771118164\nOntario                 Shirt_E     28.49000072479248\nQuebec                  Shirt_A     43.4900016784668\nQuebec                  Shirt_B     23.489999771118164\nQuebec                  Shirt_C     26.99000072479248\nQuebec                  Shirt_D     19.489999771118164\nQuebec                  Shirt_E     28.49000072479248 \n</pre>\n\n</div>"
+          }
+        ]
+      }
+    },
+    {
+      "text": "%hive\nSELECT province, product_name, AVG(product_price) as avg_price FROM sales_db.clean_sales GROUP BY province, product_name;",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-03T06:25:42+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {
+          "1": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "stackedAreaChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "province",
+                  "index": 0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "product_name",
+                  "index": 1,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675405064226_2118854761",
+      "id": "paragraph_1675405064226_2118854761",
+      "dateCreated": "2023-02-03T06:17:44+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:4501",
+      "dateFinished": "2023-02-03T06:25:11+0000",
+      "dateStarted": "2023-02-03T06:24:52+0000",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "INFO  : Compiling command(queryId=hive_20230203062452_4c3b090d-939c-4f4d-b95c-724ef3073ae8): \nSELECT province, product_name, AVG(product_price) as avg_price FROM sales_db.clean_sales GROUP BY province, product_name\nINFO  : Concurrency mode is disabled, not creating a lock manager\nINFO  : Semantic Analysis Completed (retrial = false)\nINFO  : Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:province, type:string, comment:null), FieldSchema(name:product_name, type:string, comment:null), FieldSchema(name:avg_price, type:double, comment:null)], properties:null)\nINFO  : Completed compiling command(queryId=hive_20230203062452_4c3b090d-939c-4f4d-b95c-724ef3073ae8); Time taken: 0.159 seconds\nINFO  : Concurrency mode is disabled, not creating a lock manager\nINFO  : Executing command(queryId=hive_20230203062452_4c3b090d-939c-4f4d-b95c-724ef3073ae8): \nSELECT province, product_name, AVG(product_price) as avg_price FROM sales_db.clean_sales GROUP BY province, product_name\nINFO  : Query ID = hive_20230203062452_4c3b090d-939c-4f4d-b95c-724ef3073ae8\nINFO  : Total jobs = 1\nINFO  : Launching Job 1 out of 1\nINFO  : Starting task [Stage-1:MAPRED] in serial mode\nINFO  : Subscribed to counters: [] for queryId: hive_20230203062452_4c3b090d-939c-4f4d-b95c-724ef3073ae8\nINFO  : Tez session hasn't been created yet. Opening session\n"
+          },
+          {
+            "type": "TABLE",
+            "data": "province\tproduct_name\tavg_price\nBritish Columbia\tShirt_A\t28.489999771118164\nBritish Columbia\tShirt_B\t23.989999771118164\nBritish Columbia\tShirt_C\t33.49000072479248\nBritish Columbia\tShirt_D\t19.489999771118164\nBritish Columbia\tShirt_E\t28.49000072479248\nOntario\tShirt_A\t38.4900016784668\nOntario\tShirt_B\t23.989999771118164\nOntario\tShirt_C\t26.99000072479248\nOntario\tShirt_D\t20.989999771118164\nOntario\tShirt_E\t28.49000072479248\nQuebec\tShirt_A\t43.4900016784668\nQuebec\tShirt_B\t23.489999771118164\nQuebec\tShirt_C\t26.99000072479248\nQuebec\tShirt_D\t19.489999771118164\nQuebec\tShirt_E\t28.49000072479248\n"
+          }
+        ]
+      }
+    },
+    {
+      "text": "%md \n3. Find the total quantity of each product sold in Toronto by running the command `SELECT product_name, SUM(quantity) as total_quantity FROM sales_db.clean_sales WHERE city='Toronto' GROUP BY product_name;`.\n\n<pre>\n<b>Result</b>\nShirt_A   5 \nShirt_B   9 \nShirt_C   4 \nShirt_D   7 \nShirt_E   3\n</pre>\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-03T06:28:32+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675405654800_844997744",
+      "id": "paragraph_1675405654800_844997744",
+      "dateCreated": "2023-02-03T06:27:34+0000",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:7041",
+      "dateFinished": "2023-02-03T06:28:32+0000",
+      "dateStarted": "2023-02-03T06:28:32+0000",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<ol start=\"3\">\n<li>Find the total quantity of each product sold in Toronto by running the command <code>SELECT product_name, SUM(quantity) as total_quantity FROM sales_db.clean_sales WHERE city='Toronto' GROUP BY product_name;</code>.</li>\n</ol>\n<pre>\n<b>Result</b>\nShirt_A   5 \nShirt_B   9 \nShirt_C   4 \nShirt_D   7 \nShirt_E   3\n</pre>\n\n</div>"
+          }
+        ]
+      }
+    },
+    {
+      "text": "%hive\nSELECT product_name, SUM(quantity) as total_quantity FROM sales_db.clean_sales WHERE city='Toronto' GROUP BY product_name;\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-03T06:28:26+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675405691459_712463136",
+      "id": "paragraph_1675405691459_712463136",
+      "dateCreated": "2023-02-03T06:28:11+0000",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:7144",
+      "dateFinished": "2023-02-03T06:28:46+0000",
+      "dateStarted": "2023-02-03T06:28:26+0000",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "INFO  : Compiling command(queryId=hive_20230203062826_c731881b-0d3f-4655-be2e-ead69bb2f791): \nSELECT product_name, SUM(quantity) as total_quantity FROM sales_db.clean_sales WHERE city='Toronto' GROUP BY product_name\nINFO  : Concurrency mode is disabled, not creating a lock manager\nINFO  : Semantic Analysis Completed (retrial = false)\nINFO  : Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:product_name, type:string, comment:null), FieldSchema(name:total_quantity, type:bigint, comment:null)], properties:null)\nINFO  : Completed compiling command(queryId=hive_20230203062826_c731881b-0d3f-4655-be2e-ead69bb2f791); Time taken: 0.177 seconds\nINFO  : Concurrency mode is disabled, not creating a lock manager\nINFO  : Executing command(queryId=hive_20230203062826_c731881b-0d3f-4655-be2e-ead69bb2f791): \nSELECT product_name, SUM(quantity) as total_quantity FROM sales_db.clean_sales WHERE city='Toronto' GROUP BY product_name\nINFO  : Query ID = hive_20230203062826_c731881b-0d3f-4655-be2e-ead69bb2f791\nINFO  : Total jobs = 1\nINFO  : Launching Job 1 out of 1\nINFO  : Starting task [Stage-1:MAPRED] in serial mode\nINFO  : Subscribed to counters: [] for queryId: hive_20230203062826_c731881b-0d3f-4655-be2e-ead69bb2f791\nINFO  : Tez session hasn't been created yet. Opening session\n"
+          },
+          {
+            "type": "TABLE",
+            "data": "product_name\ttotal_quantity\nShirt_A\t5\nShirt_B\t9\nShirt_C\t4\nShirt_D\t7\nShirt_E\t3\n"
+          }
+        ]
+      }
+    },
+    {
+      "text": "%md\n\n4. Find the total sales by city by running the command `SELECT city, SUM(product_price * quantity) as total_sales FROM sales_db.clean_sales GROUP BY city ORDER BY total_sales DESC;`.\n\n<pre>\n<b>Result</b>\nOttawa          1151.5800151824951\nToronto         753.7200107574463\nMontreal        733.6500091552734\nVancouver       728.6899929046631\nQuebec City     707.7200012207031\nVictoria        514.8100051879883\n</pre>\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-03T06:30:05+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675405783639_1262013970",
+      "id": "paragraph_1675405783639_1262013970",
+      "dateCreated": "2023-02-03T06:29:43+0000",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:7811",
+      "dateFinished": "2023-02-03T06:30:05+0000",
+      "dateStarted": "2023-02-03T06:30:05+0000",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<ol start=\"4\">\n<li>Find the total sales by city by running the command <code>SELECT city, SUM(product_price * quantity) as total_sales FROM sales_db.clean_sales GROUP BY city ORDER BY total_sales DESC;</code>.</li>\n</ol>\n<pre>\n<b>Result</b>\nOttawa          1151.5800151824951\nToronto         753.7200107574463\nMontreal        733.6500091552734\nVancouver       728.6899929046631\nQuebec City     707.7200012207031\nVictoria        514.8100051879883\n</pre>\n\n</div>"
+          }
+        ]
+      }
+    },
+    {
+      "text": "%hive\nSELECT city, SUM(product_price * quantity) as total_sales FROM sales_db.clean_sales GROUP BY city ORDER BY total_sales DESC;\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-03T06:30:30+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {
+          "1": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "city": "string",
+                      "total_sales": "string"
+                    },
+                    "updated": true
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675405805418_246588391",
+      "id": "paragraph_1675405805418_246588391",
+      "dateCreated": "2023-02-03T06:30:05+0000",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:7886",
+      "dateFinished": "2023-02-03T06:30:29+0000",
+      "dateStarted": "2023-02-03T06:30:10+0000",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "INFO  : Compiling command(queryId=hive_20230203063010_2a2db8f9-0a44-41b2-bbbd-ca787782ebe2): \nSELECT city, SUM(product_price * quantity) as total_sales FROM sales_db.clean_sales GROUP BY city ORDER BY total_sales DESC\nINFO  : Concurrency mode is disabled, not creating a lock manager\nINFO  : Semantic Analysis Completed (retrial = false)\nINFO  : Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:city, type:string, comment:null), FieldSchema(name:total_sales, type:double, comment:null)], properties:null)\nINFO  : Completed compiling command(queryId=hive_20230203063010_2a2db8f9-0a44-41b2-bbbd-ca787782ebe2); Time taken: 0.185 seconds\nINFO  : Concurrency mode is disabled, not creating a lock manager\nINFO  : Executing command(queryId=hive_20230203063010_2a2db8f9-0a44-41b2-bbbd-ca787782ebe2): \nSELECT city, SUM(product_price * quantity) as total_sales FROM sales_db.clean_sales GROUP BY city ORDER BY total_sales DESC\nINFO  : Query ID = hive_20230203063010_2a2db8f9-0a44-41b2-bbbd-ca787782ebe2\nINFO  : Total jobs = 1\nINFO  : Launching Job 1 out of 1\nINFO  : Starting task [Stage-1:MAPRED] in serial mode\nINFO  : Subscribed to counters: [] for queryId: hive_20230203063010_2a2db8f9-0a44-41b2-bbbd-ca787782ebe2\nINFO  : Tez session hasn't been created yet. Opening session\n"
+          },
+          {
+            "type": "TABLE",
+            "data": "city\ttotal_sales\nOttawa\t1151.5800151824951\nToronto\t753.7200107574463\nMontreal\t733.6500091552734\nVancouver\t728.6899929046631\nQuebec City\t707.7200012207031\nVictoria\t514.8100051879883\n"
+          }
+        ]
+      }
+    },
+    {
+      "user": "anonymous",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675405858588_684540932",
+      "id": "paragraph_1675405858588_684540932",
+      "dateCreated": "2023-02-03T06:30:58+0000",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:8392",
+      "text": "%md\n\n5. Find the average price of each product in each city by running the command `SELECT city, product_name, AVG(product_price) as avg_price FROM sales_db.clean_sales GROUP BY city, product_name ORDER BY avg_price DESC;`.\n\n<pre>\n<b>Result</b>\nQuebec City     Shirt_A       50.9900016784668\nOttawa          Shirt_A       40.9900016784668\nVictoria        Shirt_E       40.9900016784668\nQuebec City     Shirt_E       40.9900016784668\nOttawa          Shirt_E       40.9900016784668\nMontreal        Shirt_A       35.9900016784668\nVictoria        Shirt_C       35.9900016784668\nToronto         Shirt_A       35.9900016784668\nMontreal        Shirt_C       32.9900016784668\nToronto         Shirt_C       32.9900016784668\nVictoria        Shirt_A       30.989999771118164\nVancouver       Shirt_C       30.989999771118164\nVancouver       Shirt_B       28.989999771118164\nToronto         Shirt_B       28.989999771118164\nVancouver       Shirt_A       25.989999771118164\nVictoria        Shirt_D       25.989999771118164\nQuebec City     Shirt_D       25.989999771118164\nMontreal        Shirt_B       25.989999771118164\nOttawa          Shirt_D       22.989999771118164\nOttawa          Shirt_C       20.989999771118164\nQuebec City     Shirt_B       20.989999771118164\nQuebec City     Shirt_C       20.989999771118164\nToronto         Shirt_D       18.989999771118164\nVictoria        Shirt_B       18.989999771118164\nOttawa          Shirt_B       18.989999771118164\nVancouver       Shirt_E       15.989999771118164\nMontreal        Shirt_E       15.989999771118164\nToronto         Shirt_E       15.989999771118164\nVancouver       Shirt_D       12.989999771118164\nMontreal        Shirt_D       12.989999771118164\n</pre>\n",
+      "dateUpdated": "2023-02-03T06:31:27+0000",
+      "dateFinished": "2023-02-03T06:31:27+0000",
+      "dateStarted": "2023-02-03T06:31:27+0000",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<ol start=\"5\">\n<li>Find the average price of each product in each city by running the command <code>SELECT city, product_name, AVG(product_price) as avg_price FROM sales_db.clean_sales GROUP BY city, product_name ORDER BY avg_price DESC;</code>.</li>\n</ol>\n<pre>\n<b>Result</b>\nQuebec City     Shirt_A       50.9900016784668\nOttawa          Shirt_A       40.9900016784668\nVictoria        Shirt_E       40.9900016784668\nQuebec City     Shirt_E       40.9900016784668\nOttawa          Shirt_E       40.9900016784668\nMontreal        Shirt_A       35.9900016784668\nVictoria        Shirt_C       35.9900016784668\nToronto         Shirt_A       35.9900016784668\nMontreal        Shirt_C       32.9900016784668\nToronto         Shirt_C       32.9900016784668\nVictoria        Shirt_A       30.989999771118164\nVancouver       Shirt_C       30.989999771118164\nVancouver       Shirt_B       28.989999771118164\nToronto         Shirt_B       28.989999771118164\nVancouver       Shirt_A       25.989999771118164\nVictoria        Shirt_D       25.989999771118164\nQuebec City     Shirt_D       25.989999771118164\nMontreal        Shirt_B       25.989999771118164\nOttawa          Shirt_D       22.989999771118164\nOttawa          Shirt_C       20.989999771118164\nQuebec City     Shirt_B       20.989999771118164\nQuebec City     Shirt_C       20.989999771118164\nToronto         Shirt_D       18.989999771118164\nVictoria        Shirt_B       18.989999771118164\nOttawa          Shirt_B       18.989999771118164\nVancouver       Shirt_E       15.989999771118164\nMontreal        Shirt_E       15.989999771118164\nToronto         Shirt_E       15.989999771118164\nVancouver       Shirt_D       12.989999771118164\nMontreal        Shirt_D       12.989999771118164\n</pre>\n\n</div>"
+          }
+        ]
+      }
+    },
+    {
+      "text": "%hive\nSELECT city, product_name, AVG(product_price) as avg_price FROM sales_db.clean_sales GROUP BY city, product_name ORDER BY avg_price DESC;",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-03T06:31:58+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675405810216_1842703410",
+      "id": "paragraph_1675405810216_1842703410",
+      "dateCreated": "2023-02-03T06:30:10+0000",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:7967",
+      "dateFinished": "2023-02-03T06:32:18+0000",
+      "dateStarted": "2023-02-03T06:31:58+0000",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "INFO  : Compiling command(queryId=hive_20230203063159_20066bff-64db-4bf3-a4ab-e93c65cf8d69): \nSELECT city, product_name, AVG(product_price) as avg_price FROM sales_db.clean_sales GROUP BY city, product_name ORDER BY avg_price DESC\nINFO  : Concurrency mode is disabled, not creating a lock manager\nINFO  : Semantic Analysis Completed (retrial = false)\nINFO  : Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:city, type:string, comment:null), FieldSchema(name:product_name, type:string, comment:null), FieldSchema(name:avg_price, type:double, comment:null)], properties:null)\nINFO  : Completed compiling command(queryId=hive_20230203063159_20066bff-64db-4bf3-a4ab-e93c65cf8d69); Time taken: 0.155 seconds\nINFO  : Concurrency mode is disabled, not creating a lock manager\nINFO  : Executing command(queryId=hive_20230203063159_20066bff-64db-4bf3-a4ab-e93c65cf8d69): \nSELECT city, product_name, AVG(product_price) as avg_price FROM sales_db.clean_sales GROUP BY city, product_name ORDER BY avg_price DESC\nINFO  : Query ID = hive_20230203063159_20066bff-64db-4bf3-a4ab-e93c65cf8d69\nINFO  : Total jobs = 1\nINFO  : Launching Job 1 out of 1\nINFO  : Starting task [Stage-1:MAPRED] in serial mode\nINFO  : Subscribed to counters: [] for queryId: hive_20230203063159_20066bff-64db-4bf3-a4ab-e93c65cf8d69\nINFO  : Tez session hasn't been created yet. Opening session\n"
+          },
+          {
+            "type": "TABLE",
+            "data": "city\tproduct_name\tavg_price\nQuebec City\tShirt_A\t50.9900016784668\nOttawa\tShirt_A\t40.9900016784668\nVictoria\tShirt_E\t40.9900016784668\nQuebec City\tShirt_E\t40.9900016784668\nOttawa\tShirt_E\t40.9900016784668\nMontreal\tShirt_A\t35.9900016784668\nVictoria\tShirt_C\t35.9900016784668\nToronto\tShirt_A\t35.9900016784668\nMontreal\tShirt_C\t32.9900016784668\nToronto\tShirt_C\t32.9900016784668\nVictoria\tShirt_A\t30.989999771118164\nVancouver\tShirt_C\t30.989999771118164\nVancouver\tShirt_B\t28.989999771118164\nToronto\tShirt_B\t28.989999771118164\nVancouver\tShirt_A\t25.989999771118164\nVictoria\tShirt_D\t25.989999771118164\nQuebec City\tShirt_D\t25.989999771118164\nMontreal\tShirt_B\t25.989999771118164\nOttawa\tShirt_D\t22.989999771118164\nOttawa\tShirt_C\t20.989999771118164\nQuebec City\tShirt_B\t20.989999771118164\nQuebec City\tShirt_C\t20.989999771118164\nToronto\tShirt_D\t18.989999771118164\nVictoria\tShirt_B\t18.989999771118164\nOttawa\tShirt_B\t18.989999771118164\nVancouver\tShirt_E\t15.989999771118164\nMontreal\tShirt_E\t15.989999771118164\nToronto\tShirt_E\t15.989999771118164\nVancouver\tShirt_D\t12.989999771118164\nMontreal\tShirt_D\t12.989999771118164\n"
+          }
+        ]
+      }
+    },
+    {
+      "text": "%md\n## Step 7: Cleanup\n- Drop the table by running the command `DROP TABLE sales_data;`\n- Drop the database by running the command `DROP DATABASE sales_db;`\n- Once you have finished the lab, you may delete the cluster to avoid incurring additional charges.\n",
+      "user": "anonymous",
+      "dateUpdated": "2023-02-03T06:32:20+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1675405891580_1014662325",
+      "id": "paragraph_1675405891580_1014662325",
+      "dateCreated": "2023-02-03T06:31:31+0000",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:8489",
+      "dateFinished": "2023-02-03T06:32:20+0000",
+      "dateStarted": "2023-02-03T06:32:20+0000",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h2>Step 7: Cleanup</h2>\n<ul>\n<li>Drop the table by running the command <code>DROP TABLE sales_data;</code></li>\n<li>Drop the database by running the command <code>DROP DATABASE sales_db;</code></li>\n<li>Once you have finished the lab, you may delete the cluster to avoid incurring additional charges.</li>\n</ul>\n\n</div>"
+          }
+        ]
+      }
+    }
+  ],
+  "name": "Hive Lab",
+  "id": "2HSJFEXPX",
+  "defaultInterpreterGroup": "hive",
+  "version": "0.9.1-SNAPSHOT",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {},
+  "config": {
+    "isZeppelinNotebookCronEnable": false,
+    "looknfeel": "default",
+    "personalizedMode": "false"
+  },
+  "info": {},
+  "path": "/Hive Lab"
+}
