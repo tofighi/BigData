@@ -84,8 +84,53 @@ Shirt_D   7
 Shirt_E   3
 </pre>
 
-4. Find the total sales by city by running the command `SELECT city, SUM(product_price * quantity) as total_sales FROM clean_sales GROUP BY city;`.
-5. Find the average price of each product in each city by running the command `SELECT city, product_name, AVG(product_price) as avg_price FROM clean_sales GROUP BY city, product_name;`.
+4. Find the total sales by city by running the command `SELECT city, SUM(product_price * quantity) as total_sales FROM clean_sales GROUP BY city ORDER BY total_sales DESC;`.
+
+**Result**
+<pre>
+Ottawa          1151.5800151824951
+Toronto         753.7200107574463
+Montreal        733.6500091552734
+Vancouver       728.6899929046631
+Quebec City     707.7200012207031
+Victoria        514.8100051879883
+</pre>
+
+5. Find the average price of each product in each city by running the command `SELECT city, product_name, AVG(product_price) as avg_price FROM clean_sales GROUP BY city, product_name ORDER BY avg_price DESC;`.
+
+**Result**
+<pre>
+Quebec City     Shirt_A       50.9900016784668
+Ottawa          Shirt_A       40.9900016784668
+Victoria        Shirt_E       40.9900016784668
+Quebec City     Shirt_E       40.9900016784668
+Ottawa          Shirt_E       40.9900016784668
+Montreal        Shirt_A       35.9900016784668
+Victoria        Shirt_C       35.9900016784668
+Toronto         Shirt_A       35.9900016784668
+Montreal        Shirt_C       32.9900016784668
+Toronto         Shirt_C       32.9900016784668
+Victoria        Shirt_A       30.989999771118164
+Vancouver       Shirt_C       30.989999771118164
+Vancouver       Shirt_B       28.989999771118164
+Toronto         Shirt_B       28.989999771118164
+Vancouver       Shirt_A       25.989999771118164
+Victoria        Shirt_D       25.989999771118164
+Quebec City     Shirt_D       25.989999771118164
+Montreal        Shirt_B       25.989999771118164
+Ottawa          Shirt_D       22.989999771118164
+Ottawa          Shirt_C       20.989999771118164
+Quebec City     Shirt_B       20.989999771118164
+Quebec City     Shirt_C       20.989999771118164
+Toronto         Shirt_D       18.989999771118164
+Victoria        Shirt_B       18.989999771118164
+Ottawa          Shirt_B       18.989999771118164
+Vancouver       Shirt_E       15.989999771118164
+Montreal        Shirt_E       15.989999771118164
+Toronto         Shirt_E       15.989999771118164
+Vancouver       Shirt_D       12.989999771118164
+Montreal        Shirt_D       12.989999771118164
+</pre>
 
 ## Step 7: Cleanup
 - Drop the table by running the command `DROP TABLE sales_data;`
