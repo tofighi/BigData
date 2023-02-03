@@ -1,5 +1,9 @@
 # Hive Lab: Analyzing Sales Data with Hive on Google Dataproc
 
+## Zeppelin Notebook
+
+[Download the complete notebook from here.](https://raw.githubusercontent.com/tofighi/BigData/main/Labs/Hive%20Lab%20Sales.zpln)
+
 ## Objective: 
 - To understand the basic concepts of Apache Hive, including creating tables, loading data and perform different aggregation operations on a sales data set using Google Dataproc cluster.
 
