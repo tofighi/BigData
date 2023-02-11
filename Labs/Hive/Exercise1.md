@@ -41,17 +41,17 @@ After transferring data to HDFS, use Apache Hive Query Language (HQL):
 
 Assume the following table is the `clean_used_cars` table:
 <pre>
-BMW X3               1000
-BMW X5               10000
-Honda Civic          500
-Honda Fit              200
-Honda Civic          300
-Toyota Corolla      600
-Tesla X              20000
-Tesla X              15000
-Tesla 3              10000
-Tesla Y              12000
-BMW X3                2000
+BMW X3           1000
+BMW X5           10000
+Honda Civic      500
+Honda Fit        200
+Honda Civic      300
+Toyota Corolla   600
+Tesla X          20000
+Tesla X          15000
+Tesla 3          10000
+Tesla Y          12000
+BMW X3           2000
 </pre>
 
 This is aggregation based on the average of make and model:
