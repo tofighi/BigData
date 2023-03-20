@@ -32,9 +32,9 @@ After transferring data to HDFS, use SparkSQL and Zeppelin nobook to:
 7. Write a SparkSQL query to find the make and model for the cars with the top 10 lowest average prices.
 8. Write a SparkSQL query to recommend the top five make and models for **Economic Segment** customers
   * **Economic Segment**: Top five manufacturers in the 3000 to 20,000 price range; `3000 ≤ price < 20,000` based on the top average price.
-9. Write a Hive query to recommend the top five make and models for **Intermediate Segment** customers
+9. Write a SparkSQL query to recommend the top five make and models for **Intermediate Segment** customers
   *  **Intermediate Segment**: Top five manufacturers in the 20,000 to 300,000 price range; `20,000 ≤ price < 300,000` based on the top average price.
-10. Write a Hive query to recommend the top five make and models for the **Luxury Segment** customers
+10. Write a SparkSQL query to recommend the top five make and models for the **Luxury Segment** customers
   *  **Luxury Segment**: Top five manufacturers in the 300,000 to 2,000,000 price range; `300,000 ≤ price < 2,000,000` based on the top average price.
 
 ## HINT
