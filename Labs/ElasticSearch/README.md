@@ -3,13 +3,14 @@ Run the following in Kibana Dev Tools&nbsp;
 
 Indexing Syntax
 
-
+<pre>
 PUT /index/type/id
 {
 "field1": "value1"
 "field2": "value2"
 ........
 }
+</pre>
 
 
 Examples&nbsp;
