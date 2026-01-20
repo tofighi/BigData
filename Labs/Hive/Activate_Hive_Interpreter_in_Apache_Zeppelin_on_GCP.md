@@ -43,9 +43,6 @@ Set the following properties exactly as shown:
 hive.url=jdbc:hive2://localhost:10000
 ```
 
-> 💡 **Dataproc Note:**  
-> If Zeppelin is not running on the Dataproc master node, replace `localhost` with the **Dataproc master internal hostname**.
-
 #### Username and Password
 
 - Leave **username** empty
@@ -75,7 +72,7 @@ Ensure both dependencies are added before saving the interpreter.
 ### 4. Save and Restart Interpreter
 
 1. Click **Save**
-2. Restart the interpreter when prompted
+2. Restart the interpreter if prompted
 
 After restarting, the Hive interpreter should be available in Zeppelin notebooks.
 
@@ -107,6 +104,3 @@ For a visual walkthrough and additional explanation, watch the following video:
 - Video tutorial: https://www.youtube.com/watch?v=4qRbDcXY6YA
 - Configuration and code examples are demonstrated in the video
 
----
-
-✅ You have successfully activated the Hive interpreter in Apache Zeppelin on GCP Dataproc.
