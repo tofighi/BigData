@@ -4,6 +4,10 @@
 
 [Download the complete notebook from here.](https://raw.githubusercontent.com/tofighi/BigData/main/Labs/Hive/Hive%20Lab%20Sales.zpln)
 
+**Note:** Hive interpreter is not available by default on the Zeppelin notebook. Please refer to the following tutorial to activate it:
+
+[Activate Hive Interpreter in Apache Zeppelin (GCP Dataproc)](https://github.com/tofighi/BigData/blob/main/Labs/Hive/Activate_Hive_Interpreter_in_Apache_Zeppelin_on_GCP.md)
+
 ## Objective: 
 - To understand the basic concepts of Apache Hive, including creating tables, loading data and perform different aggregation operations on a sales data set using Google Dataproc cluster.
 
