@@ -1,4 +1,4 @@
-# Activate Hive Interpreter in Apache Zeppelin (GCP Dataproc - 2.3.18-ubuntu22)
+# Activating Hive Interpreter in Apache Zeppelin (GCP Dataproc - 2.3.18-ubuntu22)
 
 This guide explains how to activate and configure the **Hive interpreter** in an **Apache Zeppelin** notebook running on **Google Cloud Platform (GCP) Dataproc** with **2.3.18-ubuntu22** version of image.
 
@@ -94,7 +94,7 @@ SHOW DATABASES;
 
 ## Video Tutorial
 
-For a visual walkthrough and additional explanation, watch the following video (the video is for an older version - **ensure you update with the above new configurations**):
+For a visual walkthrough and additional explanation, watch the following video:
 
-[![Activate Hive Interpreter in Zeppelin](https://img.youtube.com/vi/4qRbDcXY6YA/0.jpg)](https://www.youtube.com/watch?v=4qRbDcXY6YA)
+[Activate Hive Interpreter in Zeppelin](https://youtu.be/lNkUOf6BlPA)
 
