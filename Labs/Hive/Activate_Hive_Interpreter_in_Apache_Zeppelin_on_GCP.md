@@ -1,6 +1,6 @@
-# Activate Hive Interpreter in Apache Zeppelin (GCP Dataproc)
+# Activate Hive Interpreter in Apache Zeppelin (GCP Dataproc - 2.3.18-ubuntu22)
 
-This guide explains how to activate and configure the **Hive interpreter** in an **Apache Zeppelin** notebook running on **Google Cloud Platform (GCP) Dataproc**.
+This guide explains how to activate and configure the **Hive interpreter** in an **Apache Zeppelin** notebook running on **Google Cloud Platform (GCP) Dataproc** with **2.3.18-ubuntu22** version of image.
 
 ---
 
@@ -17,9 +17,8 @@ This guide assumes Apache Zeppelin and Hive are running on **GCP Dataproc**.
 
 ### Prerequisites
 
-- Apache Zeppelin is running on the Dataproc cluster
-- HiveServer2 is running and listening on port `10000`
-- You have access to the Dataproc master node
+- **Standard Dataproc Image 2.3 (Ubuntu 22 LTS, Hadoop 3.3, Spark 3.5)** -
+First released on 06/09/2025
 
 ---
 
@@ -39,8 +38,9 @@ Set the following properties exactly as shown:
 
 #### Hive Connection URL
 
+**default.url**: 
 ```text
-hive.url=jdbc:hive2://localhost:10000
+jdbc:hive2://localhost:10000
 ```
 
 #### Username and Password
@@ -50,8 +50,9 @@ hive.url=jdbc:hive2://localhost:10000
 
 #### Hive JDBC Driver
 
+**default.driver:**
 ```text
-hive.driver=org.apache.hive.jdbc.HiveDriver
+org.apache.hive.jdbc.HiveDriver
 ```
 
 ---
@@ -61,8 +62,8 @@ hive.driver=org.apache.hive.jdbc.HiveDriver
 Under the **Dependencies** tab, add the following artifacts:
 
 ```text
-org.apache.hive:hive-jdbc:0.14.0
-org.apache.hadoop:hadoop-common:2.6.0
+org.apache.hive:hive-jdbc:3.1.3
+org.apache.hadoop:hadoop-common:3.3.6
 ```
 
 Ensure both dependencies are added before saving the interpreter.
@@ -93,14 +94,7 @@ SHOW DATABASES;
 
 ## Video Tutorial
 
-For a visual walkthrough and additional explanation, watch the following video:
+For a visual walkthrough and additional explanation, watch the following video (the video is for an older version - **ensure you update with the above new configurations**):
 
 [![Activate Hive Interpreter in Zeppelin](https://img.youtube.com/vi/4qRbDcXY6YA/0.jpg)](https://www.youtube.com/watch?v=4qRbDcXY6YA)
-
-
-
-## Reference
-
-- Video tutorial: https://www.youtube.com/watch?v=4qRbDcXY6YA
-- Configuration and code examples are demonstrated in the video
 
