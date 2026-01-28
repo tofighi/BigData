@@ -71,10 +71,11 @@ These are three segments: [0-2000], (2000,15000], (15000,20000]
 Honda Fit
 Honda Civic
 Toyota Corolla
-BMW X5 
+BMW X3
 
 2000-15000
 Tesla 3 
+BMW X5
 
 15000-20000
 Tesla X
