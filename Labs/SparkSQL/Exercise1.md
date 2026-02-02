@@ -71,6 +71,7 @@ These are three segments: [0-2000], (2000,15000], (15000,20000]
 Honda Fit
 Honda Civic
 Toyota Corolla
+BMW X3
 
 2000-15000
 BMW X5 
