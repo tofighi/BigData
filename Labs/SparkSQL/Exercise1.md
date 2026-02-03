@@ -39,7 +39,8 @@ After transferring data to HDFS, use SparkSQL and Zeppelin nobook to:
 
 ## HINT
 
-Assume the following table is the `clean_used_cars` table:
+Assume the following table is the `clean_used_cars` table (it is just an imaginary example, not part of the main dataset):
+
 <pre>
 BMW X3           1000
 BMW X5           10000
@@ -54,7 +55,7 @@ Tesla Y          12000
 BMW X3           2000
 </pre>
 
-This is aggregation based on the average of make and model:
+This is an aggregation based on the average of make and model:
 <pre>
 BMW X3          1500
 BMW X5          10000
