@@ -39,7 +39,7 @@ After transferring data to HDFS, use Apache Hive Query Language (HQL):
 
 ## HINT
 
-Assume the following table is the `clean_used_cars` table:
+Assume the following table is the `clean_used_cars` table (it is just an imaginary example, not related to the main dataset):
 <pre>
 BMW X3           1000
 BMW X5           10000
