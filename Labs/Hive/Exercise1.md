@@ -20,7 +20,7 @@ After transferring data to HDFS, use Apache Hive Query Language (HQL):
 
 1. Write a Hive query to create a table called used_cars from the data. 
 2. Write several Hive queries to find how many missing values (NULL in an attribute of a record) you have in each column (attribute).
-3. Drop the columns (attribute) with more than 50% missing values. (For example if 50% or more of `body_type` is missing, drop `body_type` column using `REPLACE COLUMNS` using HQL)
+3. Drop the columns (attribute) with more than 50% missing values. (For example, if 50% or more of `body_type` is missing, drop `body_type` column using `REPLACE COLUMNS` using HQL - If `REPLACE COLUMNS` produces an error, create a new table using a query that selects the desired columns)
 4. Write several Hive queries to create a new table called `clean_used_cars` from `used_cars` with the following conditions:
 
   * The manufacturing year between 2000 and 2017 including 2000 and 2017
